@@ -67,7 +67,7 @@ FOOT = '''
           <a href="index.html#parametry">Technické parametry</a>
           <a href="index.html#dekory">Dekory</a>
           <a href="index.html#sestava">Co je v sestavě</a>
-          <a href="index.html#certifikace">Certifikace a video</a>
+          <a href="index.html#certifikace">Certifikace</a>
           <a href="index.html#vyrobce">O výrobci GERDA</a>
         </div>
       </div>
