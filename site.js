@@ -29,13 +29,18 @@
       '<div class="p-dealer-contact">' + c.join('') + '</div>' +
       (p.oblast && p.oblast.length ? '<p class="p-dealer-area"><b>Montáž:</b> ' + p.oblast.map(esc).join(', ') + '</p>' : '') +
       (p.provozovatel ? '<p class="p-dealer-area">Provozovatel: ' + esc(p.provozovatel) + '</p>' : '') + '</div>' +
-      '<div class="p-dealer-side"><b class="p-dealer-sidehead">Služby prodejce</b>' +
+      '<div class="p-dealer-side">' +
+      (p.akce ? '<a class="p-dealer-akce" href="' + esc(p.akce) + '" target="_blank" rel="noopener"><b>Místní akce</b><span>Aktuální akční cenu PREMIUM 60 v tomto kraji najdete u prodejce →</span></a>' : '') +
+      (p.vyhody && p.vyhody.length ? '<b class="p-dealer-sidehead">Služby prodejce</b>' : '') +
       (p.vyhody && p.vyhody.length ? '<ul>' + p.vyhody.map(function (v) { return '<li>' + esc(v) + '</li>'; }).join('') + '</ul>' : '') +
-      '<div class="p-dealer-btns">' + (p.poptavka ? '<a class="btn btn-primary" href="' + esc(p.poptavka) + '" target="_blank" rel="noopener">Poptávka a akce u prodejce</a>' : '') +
+      '<div class="p-dealer-btns">' + (p.poptavka ? '<a class="btn btn-primary" href="' + esc(p.poptavka) + '" target="_blank" rel="noopener">Poptávka u prodejce</a>' : '') +
       (p.telefon ? '<a class="btn btn-outline" href="' + tel(p.telefon) + '">Zavolat</a>' : '') + '</div></div></article>';
   }
   document.querySelectorAll('[data-prodejci]').forEach(function (el) {
     el.innerHTML = P.length ? P.map(card).join('') : '<p>Seznam prodejců připravujeme.</p>';
+  });
+  document.querySelectorAll('[data-kraje]').forEach(function (el) {
+    el.innerHTML = P.map(function (p) { return '<a href="kde-koupit.html#' + esc(p.id) + '">' + esc(p.kraj) + '</a>'; }).join('');
   });
   document.querySelectorAll('[data-pocet-prodejcu]').forEach(function (el) {
     var n = P.length; el.textContent = n + (n === 1 ? ' prodejce' : (n < 5 ? ' prodejci' : ' prodejců'));

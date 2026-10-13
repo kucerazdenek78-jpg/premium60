@@ -121,6 +121,17 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 .p-dealer-area{font-size:.82rem;color:var(--text-muted)}
 .p-dealer-area b{color:var(--navy)}
 .p-dealer-side{background:var(--bg);padding:1.6rem 1.7rem;border-left:1px solid var(--gray-200);display:flex;flex-direction:column;gap:.9rem}
+.p-dealer-akce{display:block;background:#fff;border:1.5px solid var(--navy-mid);border-radius:var(--radius);padding:.8rem 1rem}
+.p-dealer-akce b{display:block;color:var(--navy);font-size:.95rem}
+.p-dealer-akce span{display:block;color:var(--navy-mid);font-size:.84rem;font-weight:600;margin-top:.15rem}
+@media (hover:hover){.p-dealer-akce:hover{background:var(--navy-light)}}
+.p-kraje{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1rem}
+.p-kraje a{border:1.5px solid var(--gray-200);background:#fff;border-radius:100px;padding:.45rem 1rem;font-weight:700;font-size:.88rem;color:var(--navy)}
+.p-sub .p-kraje{justify-content:flex-start}
+.p-sub .p-kraje a{background:transparent;border-color:var(--line-dark);color:#fff}
+@media (hover:hover){.p-kraje a:hover{border-color:var(--navy-mid)}}
+.p-note{max-width:760px;margin:0 auto 2rem;background:var(--navy-light);color:var(--navy);border-radius:var(--radius-lg);padding:1rem 1.3rem;font-size:.93rem;text-align:center}
+.p-dealer{scroll-margin-top:90px}
 .p-dealer-sidehead{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
 .p-dealer-price strong{display:block;font-size:1.7rem;font-weight:800;color:var(--orange-text);white-space:nowrap;line-height:1.1}
 .p-dealer-price del{color:var(--gray-400);font-size:.85rem}
