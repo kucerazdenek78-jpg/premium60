@@ -203,7 +203,16 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 
 @media (max-width:1000px){
   .p-hero-grid,.p-two,.p-cert,.p-dealer{grid-template-columns:1fr}
-  .p-hero-copy{padding-bottom:1rem}
+  /* mobil/tablet: PREMIUM 60 → obrázek dveří → zbytek textu */
+  .p-hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .p-hero-copy{display:contents}
+  .p-hero .p-kicker{order:1;align-self:flex-start}
+  .p-hero h1{order:2}
+  .p-hero-img{order:3;padding-top:.4rem;margin-bottom:1.6rem}
+  .p-hero .p-lead{order:4}
+  .p-hero .p-chips{order:5}
+  .p-hero .p-price{order:6}
+  .p-hero .p-cta{order:7;margin-bottom:2.5rem}
   .p-hero-img img{max-width:100%}
   .p-stats-grid{grid-template-columns:repeat(3,1fr)}
   .p-stat:nth-child(4){border-left:0}
@@ -215,7 +224,7 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 @media (max-width:600px){
   .p-hero{padding-top:6.2rem}
   .nav-logo-word small:not(.pre){display:none}
-  .p-hero-img img{max-height:560px}
+  .p-hero-img img{max-height:480px}
   .p-sec{padding:3.4rem 0}
   .p-stat b{font-size:1.25rem}
   .p-decors{gap:.7rem}
