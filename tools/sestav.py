@@ -7,7 +7,7 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib
 
 BASE = 'https://kucerazdenek78-jpg.github.io/premium60/'   # TODO: vlastní doména, např. https://premium60.cz/
-VER = '20261013h'                                            # zvýšit při změně CSS/JS
+VER = '20261013i'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 NAV = [('index.html#parametry', 'Parametry', 'parametry'),
@@ -30,7 +30,7 @@ HEAD = '''<!DOCTYPE html>
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{base}img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0b263c">
+  <meta name="theme-color" content="#efe8de">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v={ver}">
   <link rel="stylesheet" href="premium.css?v={ver}">{css}{robots}

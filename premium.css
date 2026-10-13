@@ -42,8 +42,22 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 .p-cta{display:flex;flex-wrap:wrap;gap:.8rem}
 .p-hero .btn-outline-white{border-color:rgba(255,255,255,.5)}
 .p-hero-img{align-self:end;display:flex;justify-content:center}
-.p-hero-img{padding-top:1rem}
-.p-hero-img img{width:auto;max-width:100%;max-height:560px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45));margin-bottom:-1px}
+/* hero: teplý světlý podklad laděný k dekoru dveří (světlé dřevo) */
+.p-hero{background:radial-gradient(900px 520px at 72% 55%,#fbf8f3 0%,transparent 70%),linear-gradient(170deg,#efe8de 0%,#e3d8ca 100%);color:var(--text)}
+.p-hero .p-kicker{color:#8a6a4a}
+.p-hero h1{color:var(--navy)}
+.p-hero h1 span{color:#8a6a4a}
+.p-hero .p-lead{color:#4d4338}
+.p-hero .p-chips span{color:var(--navy);border-color:rgba(11,38,60,.18);background:rgba(255,255,255,.55)}
+.p-hero .p-price{border-left-color:#8a6a4a}
+.p-hero .p-price strong{color:var(--navy)}
+.p-hero .p-price small{color:#5f5446}
+.p-hero .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.p-hero .btn-primary:hover{background:var(--orange-light);border-color:var(--orange-light)}
+.p-hero .btn-outline{border-color:rgba(11,38,60,.3);color:var(--navy);background:rgba(255,255,255,.4)}
+.p-hero-grid{grid-template-columns:1fr 1fr}
+.p-hero-img{padding-top:.5rem}
+.p-hero-img img{width:auto;max-width:100%;max-height:min(820px,82vh);filter:drop-shadow(0 30px 30px rgba(60,40,20,.28)) drop-shadow(0 4px 6px rgba(60,40,20,.18));margin-bottom:-1px}
 
 /* ── ČÍSLA ── */
 .p-stats{padding:0;background:var(--ink);border-top:1px solid var(--line-dark)}
@@ -190,7 +204,7 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 @media (max-width:1000px){
   .p-hero-grid,.p-two,.p-cert,.p-dealer{grid-template-columns:1fr}
   .p-hero-copy{padding-bottom:1rem}
-  .p-hero-img img{max-width:360px}
+  .p-hero-img img{max-width:100%}
   .p-stats-grid{grid-template-columns:repeat(3,1fr)}
   .p-stat:nth-child(4){border-left:0}
   .p-stat:nth-child(n+4){border-top:1px solid var(--line-dark)}
@@ -201,7 +215,7 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 @media (max-width:600px){
   .p-hero{padding-top:6.2rem}
   .nav-logo-word small:not(.pre){display:none}
-  .p-hero-img img{max-height:420px}
+  .p-hero-img img{max-height:560px}
   .p-sec{padding:3.4rem 0}
   .p-stat b{font-size:1.25rem}
   .p-decors{gap:.7rem}
