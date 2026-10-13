@@ -1,0 +1,163 @@
+/* PREMIUM 60 – vlastní vzhled nad základem style.css (převzato z webu bezpecne-dvere.cz) */
+:root{
+  --ink:#0d2419;            /* tmavé pozadí hero */
+  --ink-2:#143424;
+  --line-dark:rgba(255,255,255,.12);
+}
+body{background:var(--white)}
+.nav-logo-word{display:flex;align-items:baseline;gap:.35rem;font-weight:800;color:var(--navy);font-size:1.25rem;letter-spacing:-.01em;line-height:1;padding:.9rem 0}
+.nav-logo-word b{color:var(--orange-text);font-size:1.45rem}
+.nav-logo-word small{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-left:.2rem}
+.navbar .nav-menu{margin-left:auto}
+footer .nav-logo-word b{color:#f3b48f}
+
+/* ── HERO ── */
+.p-hero{background:radial-gradient(1200px 600px at 80% 20%,#1d4a33 0%,transparent 60%),linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;padding:7.5rem 0 0;overflow:hidden;position:relative}
+.p-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:end}
+.p-hero-copy{padding-bottom:4rem}
+.p-kicker{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f3b48f;margin-bottom:1rem}
+.p-hero h1{color:#fff;font-size:clamp(3rem,8vw,5.6rem);font-weight:800;letter-spacing:-.03em;line-height:.95;margin-bottom:.9rem}
+.p-hero h1 span{display:block;font-size:.34em;letter-spacing:.02em;font-weight:700;color:#f3b48f;margin-top:.7rem}
+.p-hero .p-lead{color:rgba(255,255,255,.78);font-size:1.08rem;max-width:520px;margin-bottom:1.6rem}
+.p-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.p-chips span{border:1px solid var(--line-dark);background:rgba(255,255,255,.05);color:#fff;border-radius:100px;padding:.38rem .85rem;font-size:.82rem;font-weight:600}
+.p-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem 1rem;border-left:3px solid var(--orange);padding:.2rem 0 .2rem 1rem;margin-bottom:1.8rem}
+.p-price strong{font-size:1.9rem;font-weight:800;color:#fff;white-space:nowrap}
+.p-price del{color:rgba(255,255,255,.5);font-size:.95rem}
+.p-price small{flex-basis:100%;color:rgba(255,255,255,.62);font-size:.8rem}
+.p-cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.p-hero .btn-outline-white{border-color:rgba(255,255,255,.5)}
+.p-hero-img{align-self:end;display:flex;justify-content:center}
+.p-hero-img img{width:100%;max-width:470px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45));margin-bottom:-1px}
+
+/* ── ČÍSLA ── */
+.p-stats{padding:0;background:var(--ink);border-top:1px solid var(--line-dark)}
+.p-stats-grid{display:grid;grid-template-columns:repeat(6,1fr)}
+.p-stat{padding:1.4rem .8rem;text-align:center;border-left:1px solid var(--line-dark)}
+.p-stat:first-child{border-left:0}
+.p-stat b{display:block;color:#fff;font-size:1.5rem;font-weight:800;line-height:1.1;white-space:nowrap}
+.p-stat span{display:block;color:rgba(255,255,255,.6);font-size:.74rem;margin-top:.3rem;line-height:1.3}
+
+/* ── SEKCE ── */
+.p-sec{padding:5rem 0}
+.p-sec.alt{background:var(--bg)}
+.p-head{max-width:640px;margin-bottom:2.4rem}
+.p-head.c{text-align:center;margin-left:auto;margin-right:auto}
+.p-head h2{margin:.3rem 0 .6rem}
+.p-two{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+
+/* konstrukce */
+.p-points{display:grid;gap:1rem}
+.p-point{display:grid;grid-template-columns:2.6rem 1fr;gap:.9rem;align-items:start}
+.p-point i{font-style:normal;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--orange-pale);color:var(--orange-text);display:grid;place-items:center;font-weight:800;font-size:.95rem}
+.p-point h4{margin-bottom:.15rem}
+.p-point p{font-size:.92rem}
+.p-figure{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.2rem;box-shadow:var(--shadow-sm)}
+.p-figure img{margin:0 auto;max-height:520px;width:auto}
+.p-figure figcaption{font-size:.78rem;color:var(--text-muted);text-align:center;margin-top:.6rem}
+
+/* dekory */
+.p-decors{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.p-decor{text-align:center}
+.p-decor img{width:100%;aspect-ratio:359/859;object-fit:contain;background:#fff;border-radius:6px}
+.p-decor b{display:block;margin-top:.6rem;color:var(--navy);font-size:.92rem}
+.p-decor small{display:block;color:#15803d;font-size:.74rem;font-weight:700}
+.p-extra{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:2.2rem;padding:1.1rem 1.3rem;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg)}
+.p-extra>span{font-weight:700;color:var(--navy);font-size:.92rem}
+.p-extra .sw{display:flex;align-items:center;gap:.6rem;font-size:.88rem;font-weight:600}
+.p-extra .sw img{width:44px;height:44px;border-radius:8px;object-fit:cover;border:1px solid rgba(0,0,0,.08)}
+.p-extra p{flex-basis:100%;font-size:.8rem;margin:0}
+
+/* sestava */
+.p-kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.p-kit li{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:1rem 1.1rem;font-size:.92rem;color:var(--text);display:flex;gap:.6rem}
+.p-kit li::before{content:"✓";color:#15803d;font-weight:800}
+.p-kit-img{margin-top:1.6rem;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1rem;max-width:560px}
+
+/* tabulka */
+.p-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;font-size:.93rem}
+.p-table td{padding:.75rem 1.1rem;border-bottom:1px solid var(--gray-100);vertical-align:top}
+.p-table tr:last-child td{border-bottom:0}
+.p-table td:first-child{color:var(--text-muted);width:42%}
+.p-table td:last-child{color:var(--navy);font-weight:600}
+
+/* certifikace + video */
+.p-cert{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.p-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.p-card h3{margin-bottom:.6rem}
+.p-video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000}
+.p-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* prodejci */
+.p-dealers{display:grid;gap:1.4rem}
+.p-dealer{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:0;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.p-dealer-main{padding:1.6rem 1.7rem}
+.p-dealer-top{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.p-dealer-top img{height:46px;width:auto}
+.p-dealer-top h3{margin:0}
+.p-dealer-top small{display:block;color:var(--text-muted);font-size:.82rem}
+.p-dealer-contact{display:grid;gap:.4rem;font-size:.93rem;margin-bottom:1.1rem}
+.p-dealer-contact a{color:var(--navy);font-weight:600}
+.p-dealer-contact a:hover{color:var(--orange-text)}
+.p-dealer-contact span{color:var(--text-muted)}
+.p-dealer-area{font-size:.82rem;color:var(--text-muted)}
+.p-dealer-area b{color:var(--navy)}
+.p-dealer-side{background:var(--bg);padding:1.6rem 1.7rem;border-left:1px solid var(--gray-200);display:flex;flex-direction:column;gap:.9rem}
+.p-dealer-price strong{display:block;font-size:1.7rem;font-weight:800;color:var(--orange-text);white-space:nowrap;line-height:1.1}
+.p-dealer-price del{color:var(--gray-400);font-size:.85rem}
+.p-dealer-price small{display:block;color:var(--text-muted);font-size:.76rem;margin-top:.25rem}
+.p-dealer-side ul{display:grid;gap:.3rem;font-size:.86rem}
+.p-dealer-side li::before{content:"✓ ";color:#15803d;font-weight:800}
+.p-dealer-btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto}
+.p-dealer-btns .btn{padding:.7rem 1.1rem;font-size:.88rem}
+.p-become{margin-top:2rem;padding:1.4rem 1.6rem;border:2px dashed var(--gray-200);border-radius:var(--radius-lg);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.p-become p{margin:0;max-width:640px}
+
+/* realizace */
+.p-gallery{display:grid;grid-template-columns:repeat(7,1fr);gap:.6rem}
+.p-gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius)}
+
+/* dokumenty */
+.p-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.p-doc{display:flex;flex-direction:column;gap:.4rem;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.3rem 1.4rem;box-shadow:var(--shadow-sm)}
+.p-doc b{color:var(--navy);font-size:1.02rem}
+.p-doc p{font-size:.88rem;margin:0}
+.p-doc a.more{margin-top:auto;padding-top:.5rem;font-weight:700;color:var(--orange-text);font-size:.9rem}
+@media (hover:hover){.p-doc:hover{border-color:var(--navy-mid)}}
+
+/* páska CTA */
+.p-band{background:var(--ink);color:#fff;padding:3.2rem 0}
+.p-band .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem}
+.p-band h2{color:#fff;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0}
+.p-band p{color:rgba(255,255,255,.7);margin:.3rem 0 0}
+
+/* podstránky */
+.p-sub{background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;padding:7.2rem 0 2.6rem}
+.p-sub h1{color:#fff;margin:.3rem 0 .5rem}
+.p-sub p{color:rgba(255,255,255,.75);max-width:600px}
+
+.p-disclaimer{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.55;max-width:760px}
+
+@media (max-width:1000px){
+  .p-hero-grid,.p-two,.p-cert,.p-dealer{grid-template-columns:1fr}
+  .p-hero-copy{padding-bottom:1rem}
+  .p-hero-img img{max-width:360px}
+  .p-stats-grid{grid-template-columns:repeat(3,1fr)}
+  .p-stat:nth-child(4){border-left:0}
+  .p-stat:nth-child(n+4){border-top:1px solid var(--line-dark)}
+  .p-decors{grid-template-columns:repeat(3,1fr)}
+  .p-gallery{grid-template-columns:repeat(4,1fr)}
+  .p-dealer-side{border-left:0;border-top:1px solid var(--gray-200)}
+}
+@media (max-width:600px){
+  .p-hero{padding-top:6.2rem}
+  .nav-logo-word small{display:none}
+  .p-hero-img img{max-width:270px}
+  .p-sec{padding:3.4rem 0}
+  .p-stat b{font-size:1.25rem}
+  .p-decors{gap:.7rem}
+  .p-gallery{grid-template-columns:repeat(3,1fr)}
+  .p-dealer-main,.p-dealer-side{padding:1.3rem 1.2rem}
+  .p-table td{padding:.6rem .8rem}
+  .p-sub{padding:6.2rem 0 2rem}
+}

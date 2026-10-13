@@ -1,0 +1,245 @@
+<!-- {"title": "Poptávka PREMIUM 60 – cena s montáží na klíč", "description": "Nezávazná poptávka bezpečnostních dveří PREMIUM 60: vyberte dekor, kování a otevírání, cenu s montáží na klíč uvidíte hned.", "nav": "poptavka", "css": "/* Poptávka dveří – vlastní formulář (náhrada Jotformu) */\n.pq-hero{background:linear-gradient(150deg,#eef6f1 0%,#e8f5ee 50%,#f6faf7 100%);padding:7rem 0 2.2rem;border-bottom:1px solid var(--gray-200)}\n.pq-hero h1{margin:.4rem 0 .5rem}\n.pq-hero p{font-size:1.05rem;max-width:560px}\n.pq-wrap{padding:2rem 0 5rem;background:var(--bg)}\n.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}\n.pq-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}\n\n/* kroky */\n.pq-steps{display:flex;gap:.5rem;margin:0 0 1.6rem;padding:0;counter-reset:none}\n.pq-steps li{flex:1;display:flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--gray-400);padding:.6rem .7rem;border-radius:var(--radius);background:var(--white);border:1px solid var(--gray-200)}\n.pq-steps li span{display:inline-grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--gray-100);color:var(--gray-600);font-size:.8rem;flex-shrink:0}\n.pq-steps li.on{color:var(--navy);border-color:var(--navy-mid)}\n.pq-steps li.on span{background:var(--navy);color:#fff}\n.pq-steps li.done span{background:var(--navy-mid);color:#fff}\n\n.pq-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:2rem;align-items:start}\n.pq-block{border:0;margin:0 0 1.6rem;padding:1.4rem 1.5rem;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}\n.pq-block legend{float:left;width:100%;font-weight:700;font-size:1.08rem;color:var(--navy);margin-bottom:1rem}\n.pq-block legend small{font-weight:500;font-size:.8rem;color:var(--text-muted);margin-left:.4rem}\n.pq-block legend+*{clear:both}\n.pq-help{font-size:.85rem;margin:-.4rem 0 .9rem}\n.pq-block .pq-help:last-child{margin:.8rem 0 0}\n.pq-block.pq-err{border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.12)}\n.pq-errtxt{color:#a12a1d;font-size:.85rem;font-weight:600;margin-top:.7rem}\n.pq-note{background:var(--navy-light);color:var(--navy);border-radius:var(--radius);padding:.9rem 1.1rem;margin-bottom:1.2rem;font-size:.93rem}\n\n/* výběrové dlaždice – společné */\n.pq-opt{position:relative;cursor:pointer;background:var(--white);border:2px solid var(--gray-200);border-radius:12px;transition:border-color .15s,box-shadow .15s,transform .15s;text-align:center;color:var(--text)}\n.pq-opt input{position:absolute;opacity:0;pointer-events:none}\n.pq-opt:has(input:checked){border-color:var(--orange);box-shadow:0 0 0 3px rgba(194,65,12,.15)}\n.pq-opt:has(input:focus-visible){outline:3px solid var(--navy-mid);outline-offset:2px}\n.pq-opt:has(input:checked)::after{content:\"✓\";position:absolute;top:.4rem;right:.4rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--orange);color:#fff;font-size:.85rem;font-weight:700;display:grid;place-items:center}\n@media (hover:hover){.pq-opt:hover{border-color:var(--navy-mid)}}\n\n/* modely */\n.pq-models{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}\n.pq-model{padding:.7rem .7rem 1rem;display:flex;flex-direction:column}\n.pq-model img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:8px}\n.pq-model b{display:block;margin-top:.5rem;color:var(--navy);font-size:1rem}\n.pq-model .pq-spec{font-size:.75rem;color:var(--text-muted)}\n.pq-model .pq-price{margin-top:auto;padding-top:.45rem;font-weight:800;color:var(--orange-text);font-size:1.02rem;white-space:nowrap}\n.pq-model .pq-price s{display:block;font-weight:500;font-size:.75rem;color:var(--gray-400)}\n.pq-model .pq-tag{position:absolute;top:.5rem;left:.5rem;background:var(--navy);color:#fff;font-size:.68rem;font-weight:700;padding:.15rem .5rem;border-radius:100px;letter-spacing:.03em}\n\n/* barvy */\n.pq-swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:.7rem}\n.pq-sw{padding:.45rem .45rem .6rem}\n.pq-sw .pq-swimg{width:100%;aspect-ratio:1/1;border-radius:8px;background:#ddd center/cover no-repeat;border:1px solid rgba(0,0,0,.06)}\n.pq-sw span{display:block;font-size:.8rem;font-weight:600;margin-top:.35rem;line-height:1.25}\n.pq-sw small{display:block;font-size:.7rem;margin-top:.15rem;font-weight:600}\n.pq-sw small.sk{color:#15803d}\n.pq-sw small.ob{color:var(--text-muted)}\n.pq-sw small.pl{color:var(--orange-text)}\n\n/* chipy (krátké volby) */\n.pq-chips{display:flex;flex-wrap:wrap;gap:.6rem}\n.pq-chip{padding:.65rem 1rem;font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:.5rem}\n.pq-chip i{width:1.1rem;height:1.1rem;border-radius:50%;border:1px solid rgba(0,0,0,.15);display:inline-block;flex-shrink:0}\n.pq-chip em{font-style:normal;color:var(--orange-text);font-size:.8rem;font-weight:700}\n.pq-chip small{font-weight:500;color:var(--text-muted);font-size:.75rem}\n.pq-chip:has(input:checked)::after{display:none}\n.pq-chip:has(input:checked){background:var(--orange-pale)}\n\n/* dlaždice s nakresleným obrázkem */\n.pq-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.7rem}\n.pq-tiles-wide{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}\n.pq-tile{padding:.8rem .7rem .9rem}\n.pq-tile svg{width:100%;height:84px;display:block;margin-bottom:.4rem}\n.pq-tile span{display:block;font-size:.83rem;font-weight:600;line-height:1.3}\n.pq-tile em{display:block;font-style:normal;font-size:.78rem;font-weight:700;color:var(--orange-text);margin-top:.2rem}\n.pq-tile em.free{color:#15803d}\n\n/* formulářová pole */\n.pq-grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}\n.pq-f{display:block;font-size:.83rem;font-weight:600;color:var(--navy);margin-bottom:1rem}\n.pq-f input,.pq-f textarea{display:block;width:100%;margin-top:.35rem;padding:.8rem 1rem;border:1.5px solid var(--gray-200);border-radius:var(--radius);font:inherit;font-size:1rem;font-weight:400;color:var(--text);background:#fff;outline:none}\n.pq-f input:focus,.pq-f textarea:focus{border-color:var(--orange)}\n.pq-f input.bad{border-color:#c0392b;background:#fdf3f2}\n.pq-f-short{max-width:200px}\n.pq-check{display:flex;align-items:flex-start;gap:.6rem;font-size:.92rem;font-weight:600;color:var(--navy);cursor:pointer;margin:.6rem 0 1rem}\n.pq-check input{width:1.25rem;height:1.25rem;accent-color:var(--orange);margin-top:.1rem;flex-shrink:0}\n#pqBillingFields{margin-top:1.1rem}\n\n/* fotky */\n.pq-photos{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}\n.pq-photo{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.2rem;padding:1.2rem .8rem;border:2px dashed var(--gray-200);border-radius:12px;cursor:pointer;color:var(--navy-mid);background:var(--bg);overflow:hidden;min-height:170px;justify-content:center}\n.pq-photo input{position:absolute;opacity:0;inset:0;cursor:pointer}\n.pq-photo-ico svg{width:46px;height:46px}\n.pq-photo strong{color:var(--navy);font-size:.92rem}\n.pq-photo small{color:var(--text-muted);font-size:.78rem}\n.pq-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}\n.pq-photo.has{border-style:solid;border-color:var(--orange)}\n.pq-photo.has::after{content:\"Změnit fotku\";position:absolute;left:0;right:0;bottom:0;background:rgba(18,61,39,.82);color:#fff;font-size:.8rem;font-weight:600;padding:.4rem}\n\n/* navigace kroků */\n.pq-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:.4rem}\n.pq-nav .btn{padding:.9rem 1.6rem;font-size:1rem}\n\n/* shrnutí */\n.pq-review{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin:0;font-size:.92rem}\n.pq-review dt{color:var(--text-muted);font-weight:500}\n.pq-review dd{margin:0;color:var(--text);font-weight:600}\n.pq-review .edit{grid-column:1/-1;font-size:.82rem;color:var(--orange-text);background:none;border:0;padding:0;text-align:left;cursor:pointer;font-weight:600;margin:-.2rem 0 .5rem}\n.pq-gdpr{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.1rem 1.5rem;margin-bottom:1.2rem}\n.pq-gdpr p{font-size:.82rem;margin-bottom:.4rem}\n.pq-msg{margin-top:1rem;padding:1rem 1.1rem;border-radius:10px;font-size:.95rem;line-height:1.5;background:#fdecea;color:#7a1c12}\n\n/* souhrnná karta */\n.pq-summary{position:sticky;top:96px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}\n.pq-summary img{width:100%;height:190px;object-fit:contain;background:#fff;border-bottom:1px solid var(--gray-100)}\n.pq-sum-body{padding:1.1rem 1.3rem 1.3rem}\n.pq-sum-model{font-weight:800;color:var(--navy);font-size:1.1rem}\n.pq-sum-lines{margin:.6rem 0 0;padding:0;font-size:.83rem;color:var(--text-muted)}\n.pq-sum-lines li{display:flex;justify-content:space-between;gap:.6rem;padding:.25rem 0;border-bottom:1px dashed var(--gray-100)}\n.pq-sum-lines li b{color:var(--text);font-weight:600;white-space:nowrap}\n.pq-sum-price{display:flex;justify-content:space-between;align-items:baseline;margin-top:.9rem}\n.pq-sum-price span{font-size:.83rem;font-weight:600;color:var(--navy)}\n.pq-sum-price strong{font-size:1.45rem;color:var(--orange-text);white-space:nowrap}\n.pq-sum-note{font-size:.74rem;margin-top:.4rem;line-height:1.45}\n\n/* poděkování */\n.pq-done{max-width:620px;margin:1rem auto;text-align:center;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:2.5rem 1.6rem;box-shadow:var(--shadow)}\n.pq-done-ico{width:64px;height:64px;margin:0 auto 1rem;border-radius:50%;background:#15803d;color:#fff;font-size:2rem;display:grid;place-items:center}\n.pq-done p{margin:.6rem 0}\n.pq-done .btn{margin-top:1rem}\n.pq-done-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}\n.pq-done-warn{background:var(--orange-pale);color:#7c2d0c;border-radius:8px;padding:.8rem 1rem;font-size:.9rem}\n\n/* adresa + doprava */\n.pq-addr{position:relative}\n.pq-suggest{position:absolute;left:0;right:0;top:calc(100% - .7rem);z-index:30;margin:0;padding:.3rem 0;list-style:none;background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--radius);box-shadow:var(--shadow-lg);max-height:320px;overflow:auto}\n.pq-suggest li[data-i]{padding:.55rem .9rem;cursor:pointer;display:flex;flex-direction:column;line-height:1.3}\n.pq-suggest li[data-i] b{font-size:.93rem;color:var(--text);font-weight:600}\n.pq-suggest li[data-i] span{font-size:.78rem;color:var(--text-muted)}\n.pq-suggest li.on,.pq-suggest li[data-i]:hover{background:var(--orange-pale)}\n.pq-sg-logo{display:flex;align-items:center;justify-content:flex-end;gap:.4rem;font-size:.7rem;color:var(--gray-400);padding:.35rem .9rem .2rem}\n.pq-trip{margin-top:.2rem;padding:.75rem 1rem;border-radius:var(--radius);background:var(--orange-pale);color:#7c2d0c;font-size:.9rem}\n.pq-trip.ok{background:var(--navy-light);color:var(--navy)}\n.pq-trip small{opacity:.8}\n.pq-f select{display:block;width:100%;margin-top:.35rem;padding:.8rem 1rem;border:1.5px solid var(--gray-200);border-radius:var(--radius);font:inherit;font-size:1rem;font-weight:400;color:var(--text);background:#fff;outline:none}\n.pq-f select:focus{border-color:var(--orange)}\n.pq-f select.bad{border-color:#c0392b;background:#fdf3f2}\n\n@media (max-width:980px){\n  .pq-layout{grid-template-columns:1fr}\n  .pq-models{grid-template-columns:repeat(2,1fr)}\n  .pq-summary{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:50;border-radius:14px 14px 0 0;box-shadow:0 -6px 24px rgba(18,61,39,.18)}\n  .pq-summary img,.pq-sum-lines,.pq-sum-note{display:none}\n  .pq-sum-body{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.75rem 1rem calc(.75rem + env(safe-area-inset-bottom))}\n  .pq-sum-model{font-size:.95rem}\n  .pq-sum-price{margin:0;flex-direction:column;align-items:flex-end}\n  .pq-sum-price span{font-size:.7rem}\n  .pq-sum-price strong{font-size:1.2rem}\n  .pq-wrap{padding-bottom:7rem}\n}\n@media (max-width:600px){\n  .pq-hero{padding:6rem 0 1.6rem}\n  .pq-steps li{font-size:0;justify-content:center;padding:.5rem}\n  .pq-steps li span{font-size:.8rem}\n  .pq-block{padding:1.1rem 1rem}\n  .pq-grid2,.pq-photos{grid-template-columns:1fr}\n  .pq-swatches{grid-template-columns:repeat(3,1fr);gap:.5rem}\n  .pq-tiles{grid-template-columns:repeat(2,1fr)}\n  .pq-tiles-wide{grid-template-columns:1fr}\n  .pq-nav .btn{flex:1;justify-content:center;padding:.9rem 1rem}\n  .pq-review{grid-template-columns:1fr;gap:.1rem}\n  .pq-review dd{margin-bottom:.5rem}\n}\n.pq-hero.p-sub{background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);border-bottom:0;padding:7.2rem 0 2.6rem}.pq-hero.p-sub h1{color:#fff}.pq-hero.p-sub p{color:rgba(255,255,255,.75)}", "scripts": ["poptavka-pdf/poptavka-pdf.js?v={ver}", "poptavka.js?v={ver}"]} -->
+<!-- Poptávka PREMIUM 60 – kopie formuláře z bezpecne-dvere.cz (poptavka-dvere.html), model zamčen na PREMIUM 60 -->
+<header class="pq-hero p-sub">
+  <div class="container">
+    <span class="p-kicker">Nezávazná poptávka · prodejce Bezpečné dveře, Most</span>
+    <h1>Poptávka PREMIUM 60</h1>
+    <p>Vyberte dekor a kování. Cenu s montáží na klíč u prodejce Bezpečné dveře vidíte hned.</p>
+  </div>
+</header>
+
+<section class="pq-wrap">
+  <div class="container">
+    <ol class="pq-steps" aria-label="Postup">
+      <li class="on" data-step-ind="1"><span>1</span>Dveře</li>
+      <li data-step-ind="2"><span>2</span>Kontakt</li>
+      <li data-step-ind="3"><span>3</span>Doplnit</li>
+      <li data-step-ind="4"><span>4</span>Odeslat</li>
+    </ol>
+
+    <div class="pq-layout">
+      <form id="pq" novalidate>
+        <input type="text" name="_honey" class="pq-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <!-- ── KROK 1: DVEŘE ── -->
+        <div class="pq-step" data-step="1">
+          <fieldset class="pq-block" hidden>
+            <legend>Model</legend>
+            <div class="pq-models" id="pqModels"></div>
+          </fieldset>
+
+          <div id="pqModelOptions" hidden>
+            <fieldset class="pq-block">
+              <legend>Barva dveří <small id="pqShadeHint"></small></legend>
+              <div class="pq-swatches" id="pqShades"></div>
+            </fieldset>
+
+            <fieldset class="pq-block" id="pqFrameBlock" hidden>
+              <legend>Barva lakované zárubně</legend>
+              <div class="pq-chips" id="pqFrames"></div>
+            </fieldset>
+
+            <fieldset class="pq-block">
+              <legend id="pqHwLegend">Kování a kukátko</legend>
+              <div class="pq-tiles" id="pqHardware"></div>
+            </fieldset>
+
+            <fieldset class="pq-block" id="pqPeepBlock" hidden>
+              <legend>Kukátko</legend>
+              <div class="pq-tiles" id="pqPeep"></div>
+            </fieldset>
+
+            <fieldset class="pq-block" id="pqLockBlock" hidden>
+              <legend>Vložky (zámky)</legend>
+              <div class="pq-tiles pq-tiles-wide" id="pqLocks"></div>
+            </fieldset>
+
+            <fieldset class="pq-block">
+              <legend>Kam se mají dveře otevírat?</legend>
+              <p class="pq-help">Díváte se na dveře z chodby (zvenku).</p>
+              <div class="pq-tiles" id="pqOpening"></div>
+            </fieldset>
+
+            <fieldset class="pq-block">
+              <legend>Šířka dveří</legend>
+              <div class="pq-chips" id="pqWidth"></div>
+              <p class="pq-help" id="pqWidthHint"></p>
+            </fieldset>
+
+            <fieldset class="pq-block">
+              <legend>Prodloužená záruka</legend>
+              <div class="pq-chips" id="pqWarranty"></div>
+            </fieldset>
+          </div>
+
+          <div class="pq-nav">
+            <span></span>
+            <button type="button" class="btn btn-primary" data-next>Pokračovat na kontakt →</button>
+          </div>
+        </div>
+
+        <!-- ── KROK 2: KONTAKT ── -->
+        <div class="pq-step" data-step="2" hidden>
+          <fieldset class="pq-block">
+            <legend>Na koho se máme obrátit?</legend>
+            <div class="pq-grid2">
+              <label class="pq-f">Jméno *<input name="jmeno" autocomplete="given-name" required></label>
+              <label class="pq-f">Příjmení *<input name="prijmeni" autocomplete="family-name" required></label>
+              <label class="pq-f">Telefon *<input name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="777 123 456" required pattern="[+0-9 ]{9,17}"></label>
+              <label class="pq-f">E-mail<input name="email" type="email" autocomplete="email" placeholder="vas@email.cz"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>Kde budeme dveře montovat?</legend>
+            <div class="pq-addr">
+              <label class="pq-f">Ulice a číslo popisné *<input name="ulice" autocomplete="off" required placeholder="Začněte psát, např. Okružní 12, Most" role="combobox" aria-autocomplete="list" aria-controls="pqSuggest"></label>
+              <ul class="pq-suggest" id="pqSuggest" role="listbox" hidden></ul>
+            </div>
+            <div class="pq-grid2">
+              <label class="pq-f">Město *<input name="mesto" autocomplete="address-level2" required></label>
+              <label class="pq-f">PSČ<input name="psc" inputmode="numeric" autocomplete="postal-code" placeholder="434 01"></label>
+            </div>
+            <div class="pq-trip" id="pqTrip" hidden></div>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>V jakém patře jsou dveře?</legend>
+            <label class="pq-f pq-f-short"><span class="sr">Patro</span>
+              <select name="patro" required>
+                <option value="">– vyberte –</option>
+                <option value="0">Přízemí</option>
+                <option value="1">1. patro</option><option value="2">2. patro</option><option value="3">3. patro</option>
+                <option value="4">4. patro</option><option value="5">5. patro</option><option value="6">6. patro</option>
+                <option value="7">7. patro</option><option value="8">8. patro</option><option value="9">9. patro</option>
+                <option value="10">10. patro</option><option value="11">11. patro</option><option value="12">12. patro</option>
+              </select>
+            </label>
+            <div id="pqLift" hidden>
+              <p class="pq-help" style="margin:0 0 .6rem">Je v domě výtah? Bez výtahu účtujeme vynesení 250 Kč za patro.</p>
+              <div class="pq-chips">
+                <label class="pq-opt pq-chip"><input type="radio" name="vytah" value="Ano">Ano, je výtah</label>
+                <label class="pq-opt pq-chip"><input type="radio" name="vytah" value="Ne">Ne, bez výtahu <em>+ 250 Kč / patro</em></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>Fakturační údaje</legend>
+            <div class="pq-chips" id="pqBilling"></div>
+            <div id="pqBillingFields" hidden>
+              <div class="pq-grid2">
+                <label class="pq-f">Jméno a příjmení objednatele / název firmy *<input name="fak_jmeno" data-req></label>
+                <label class="pq-f">Fakturační adresa (ulice, č. p., město, PSČ) *<input name="fak_adresa" data-req></label>
+              </div>
+              <div class="pq-grid2" id="pqCompany" hidden>
+                <label class="pq-f">IČ *<input name="ic" inputmode="numeric" data-req-firma></label>
+                <label class="pq-check"><input type="checkbox" name="platce_dph" value="Ano"> Jsem plátce DPH</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="pq-nav">
+            <button type="button" class="btn btn-outline" data-prev>← Zpět</button>
+            <button type="button" class="btn btn-primary" data-next>Pokračovat →</button>
+          </div>
+        </div>
+
+        <!-- ── KROK 3: DOPLŇUJÍCÍ (NEPOVINNÉ) ── -->
+        <div class="pq-step" data-step="3" hidden>
+          <div class="pq-note">Pomozte nám se víc zorientovat. Pokud si na to netroufnete, nic se neděje, stačí pokračovat.</div>
+
+          <fieldset class="pq-block">
+            <legend>Z jakého materiálu je zeď?</legend>
+            <div class="pq-tiles" id="pqWall"></div>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>Fotky stávajících dveří</legend>
+            <div class="pq-photos">
+              <label class="pq-photo" data-photo="fotka_dveri">
+                <input type="file" accept="image/*">
+                <span class="pq-photo-ico" aria-hidden="true">
+                  <svg viewBox="0 0 48 48"><rect x="12" y="5" width="24" height="38" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="30" cy="25" r="2" fill="currentColor"/></svg>
+                </span>
+                <strong>Dveře zvenku</strong>
+                <small>Celé dveře včetně zárubně a zdi</small>
+                <img alt="" hidden>
+              </label>
+              <label class="pq-photo" data-photo="fotka_zarubne">
+                <input type="file" accept="image/*">
+                <span class="pq-photo-ico" aria-hidden="true">
+                  <svg viewBox="0 0 48 48"><path d="M10 44V6h28v38" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M16 44V12h16v32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+                </span>
+                <strong>Zárubeň</strong>
+                <small>Zárubeň se zdí, ideálně s přiloženým metrem</small>
+                <img alt="" hidden>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>Výška od podlahy k nadpraží</legend>
+            <label class="pq-f pq-f-short">Výška v cm<input name="vyska_cm" inputmode="numeric" placeholder="např. 197"></label>
+            <p class="pq-help">Změřte od podlahy po horní roh, kde končí dveřní otvor.</p>
+          </fieldset>
+
+          <fieldset class="pq-block">
+            <legend>Ještě něco?</legend>
+            <label class="pq-f"><span class="sr">Další požadavek</span><textarea name="poznamka" rows="4" placeholder="Popište nám, co dalšího pro vás můžeme udělat (patro bez výtahu, termín, dotaz…)"></textarea></label>
+          </fieldset>
+
+          <div class="pq-nav">
+            <button type="button" class="btn btn-outline" data-prev>← Zpět</button>
+            <button type="button" class="btn btn-primary" data-next>Zkontrolovat →</button>
+          </div>
+        </div>
+
+        <!-- ── KROK 4: SHRNUTÍ A ODESLÁNÍ ── -->
+        <div class="pq-step" data-step="4" hidden>
+          <fieldset class="pq-block">
+            <legend>Zkontrolujte poptávku</legend>
+            <dl class="pq-review" id="pqReview"></dl>
+          </fieldset>
+
+          <div class="pq-gdpr">
+            <p>Poptávka jde prodejci Bezpečné dveře (Zdeněk Kučera, IČ 64682676). Veškeré osobní údaje, které nám v rámci této poptávky poskytnete, zpracováváme v souladu s nařízením GDPR. Slouží pouze k vyřízení vaší poptávky. Neprodáváme je. Podrobnosti o zpracování, příjemcích a vašich právech najdete v <a href="https://bezpecne-dvere.cz/zasady-osobnich-udaju.html" target="_blank" rel="noopener">Zásadách zpracování osobních údajů</a>.</p>
+            <label class="pq-check"><input type="checkbox" id="pqConsent"> Souhlasím se zpracováním osobních údajů dle uvedených podmínek. *</label>
+          </div>
+
+          <div class="pq-nav">
+            <button type="button" class="btn btn-outline" data-prev>← Zpět</button>
+            <button type="submit" class="btn btn-primary" id="pqSubmit">Odeslat poptávku</button>
+          </div>
+          <div class="pq-msg" id="pqMsg" role="status" hidden></div>
+        </div>
+      </form>
+
+      <!-- ── SOUHRN (vpravo / dole na mobilu) ── -->
+      <aside class="pq-summary" id="pqSummary" aria-live="polite">
+        <img id="sumImg" alt="" hidden>
+        <div class="pq-sum-body">
+          <div class="pq-sum-model" id="sumModel">Zatím nevybráno</div>
+          <ul class="pq-sum-lines" id="sumLines"></ul>
+          <div class="pq-sum-price">
+            <span>Orientační cena</span>
+            <strong id="sumPrice">–</strong>
+          </div>
+          <p class="pq-sum-note" id="sumNote">Vč. 12 % DPH, montáže na klíč a odvozu starých dveří. Doprava do 40 km zdarma.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ── PODĚKOVÁNÍ ── -->
+    <div class="pq-done" id="pqDone" hidden>
+      <div class="pq-done-ico" aria-hidden="true">✓</div>
+      <h2>Děkujeme, poptávka je odeslaná</h2>
+      <p>Číslo poptávky: <strong id="doneRef"></strong></p>
+      <p>Ozveme se vám co nejdříve, většinou ještě týž pracovní den. Spěcháte? Zavolejte na <a href="tel:+420725559235">+420 725 559 235</a>.</p>
+      <p id="doneWarn" class="pq-done-warn" hidden></p>
+      <div class="pq-done-btns"><a id="donePdf" class="btn btn-primary" hidden>Stáhnout shrnutí (PDF)</a><a href="index.html" class="btn btn-outline">Zpět na úvod</a></div>
+    </div>
+  </div>
+</section>
+
+
