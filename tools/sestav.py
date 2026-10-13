@@ -7,10 +7,10 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib
 
 BASE = 'https://kucerazdenek78-jpg.github.io/premium60/'   # TODO: vlastní doména, např. https://premium60.cz/
-VER = '20261013a'                                            # zvýšit při změně CSS/JS
+VER = '20261013c'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-NAV = [('index.html', 'PREMIUM 60', 'index'), ('index.html#parametry', 'Parametry', 'parametry'),
+NAV = [('index.html#parametry', 'Parametry', 'parametry'),
        ('index.html#dekory', 'Dekory', 'dekory'), ('kde-koupit.html', 'Kde koupit', 'kde-koupit'),
        ('servis-a-dokumenty.html', 'Servis a dokumenty', 'servis')]
 
@@ -30,7 +30,7 @@ HEAD = '''<!DOCTYPE html>
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{base}img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0d2419">
+  <meta name="theme-color" content="#0b263c">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v={ver}">
   <link rel="stylesheet" href="premium.css?v={ver}">{css}{robots}
@@ -45,7 +45,7 @@ HEAD = '''<!DOCTYPE html>
 {nav}
       </ul>
       <div style="display:flex;align-items:center;gap:0.75rem;">
-        <a href="poptavka.html" class="btn btn-primary" style="padding:0.6rem 1.2rem;font-size:0.85rem;">Poptávka</a>
+        <a href="kde-koupit.html" class="btn btn-primary" style="padding:0.6rem 1.2rem;font-size:0.85rem;">Kde koupit</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -68,13 +68,13 @@ FOOT = '''
           <a href="index.html#dekory">Dekory</a>
           <a href="index.html#sestava">Co je v sestavě</a>
           <a href="index.html#certifikace">Certifikace a video</a>
+          <a href="index.html#vyrobce">O výrobci GERDA</a>
         </div>
       </div>
       <div class="footer-col">
         <h5>Nákup</h5>
         <div class="footer-links">
           <a href="kde-koupit.html">Kde koupit</a>
-          <a href="poptavka.html">Nezávazná poptávka</a>
           <a href="kde-koupit.html#stat-se-prodejcem">Stát se prodejcem</a>
         </div>
       </div>
@@ -82,14 +82,14 @@ FOOT = '''
         <h5>Servis</h5>
         <div class="footer-links">
           <a href="servis-a-dokumenty.html">Servis a dokumenty</a>
-          <a href="dokumenty/letak-premium-60.pdf" target="_blank" rel="noopener">Leták PREMIUM 60 (PDF)</a>
+          <a href="dokumenty/premium-60-letak.pdf" target="_blank" rel="noopener">Leták PREMIUM 60 (PDF)</a>
           <a href="https://bezpecne-dvere.cz/zasady-osobnich-udaju.html" target="_blank" rel="noopener">Zásady osobních údajů</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom" style="flex-direction:column;align-items:flex-start;gap:.6rem">
-      <p class="p-disclaimer">PREMIUM 60 vyrábí společnost GERDA. Tento web není oficiálním webem výrobce – provozuje ho prodejce Bezpečné dveře. Ceny, montáž a záruční podmínky určuje vždy konkrétní prodejce.</p>
-      <span>© <span class="cy">2026</span> Provozovatel webu: Zdeněk Kučera (Bezpečné dveře), IČ 64682676, DIČ CZ7801242768, Zd. Štěpánka 2764/1, 434 01 Most</span>
+      <p class="p-disclaimer">PREMIUM 60 vyrábí GERDA Sp. z o.o. (Polsko). Tento web provozuje prodejce, nejde o oficiální web výrobce. Ceny, montáž a záruční podmínky určuje vždy konkrétní prodejce.</p>
+      <span>© <span class="cy">2026</span> Provozovatel webu: Zdeněk Kučera, IČ 64682676, DIČ CZ7801242768, Zd. Štěpánka 2764/1, 434 01 Most</span>
     </div>
   </div>
 </footer>

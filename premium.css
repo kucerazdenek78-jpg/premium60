@@ -1,27 +1,41 @@
-/* PREMIUM 60 – vlastní vzhled nad základem style.css (převzato z webu bezpecne-dvere.cz) */
+/* PREMIUM 60 – vlastní vzhled nad základem style.css (převzato z webu bezpecne-dvere.cz).
+   Barvy: tmavě modrá z loga GERDA (#0b263c), čisté bílé a studené šedé plochy, ocelově modrý akcent. */
 :root{
-  --ink:#0d2419;            /* tmavé pozadí hero */
-  --ink-2:#143424;
-  --line-dark:rgba(255,255,255,.12);
+  --navy:#0b263c; --navy-mid:#2a6aa3; --navy-light:#eaf1f8;
+  --orange:#0b263c; --orange-light:#16405f; --orange-pale:#eaf1f8; --orange-text:#2a6aa3;
+  --blue:#2a6aa3;
+  --bg:#f4f6f8; --bg-alt:#eceff3;
+  --gray-100:#eef1f4; --gray-200:#dde3e9; --gray-400:#5c6b7a; --gray-600:#3c4a58;
+  --text:#14202b; --text-muted:#536170;
+  --shadow-sm:0 1px 4px rgba(11,38,60,.07); --shadow:0 4px 20px rgba(11,38,60,.09); --shadow-lg:0 10px 40px rgba(11,38,60,.14);
+  --ink:#0b263c;            /* tmavé pozadí hero */
+  --ink-2:#14385a;
+  --sky:#a9cbea;            /* akcent na tmavém */
+  --line-dark:rgba(255,255,255,.14);
 }
+.btn-primary:hover{box-shadow:0 6px 20px rgba(11,38,60,.25)}
+.p-hero .btn-primary,.p-band .btn-primary{background:#fff;color:var(--navy);border-color:#fff}
+.p-hero .btn-primary:hover,.p-band .btn-primary:hover{background:var(--navy-light);border-color:var(--navy-light)}
+.footer-links a:hover{color:var(--sky)}
 body{background:var(--white)}
 .nav-logo-word{display:flex;align-items:baseline;gap:.35rem;font-weight:800;color:var(--navy);font-size:1.25rem;letter-spacing:-.01em;line-height:1;padding:.9rem 0}
 .nav-logo-word b{color:var(--orange-text);font-size:1.45rem}
+.nav-logo-word small.pre{margin:0 .15rem 0 0;color:var(--orange-text);letter-spacing:.12em}
 .nav-logo-word small{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-left:.2rem}
 .navbar .nav-menu{margin-left:auto}
-footer .nav-logo-word b{color:#f3b48f}
+footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 
 /* ── HERO ── */
-.p-hero{background:radial-gradient(1200px 600px at 80% 20%,#1d4a33 0%,transparent 60%),linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;padding:7.5rem 0 0;overflow:hidden;position:relative}
+.p-hero{background:radial-gradient(1200px 600px at 80% 20%,#1f4c74 0%,transparent 60%),linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;padding:7.5rem 0 0;overflow:hidden;position:relative}
 .p-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:end}
 .p-hero-copy{padding-bottom:4rem}
-.p-kicker{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f3b48f;margin-bottom:1rem}
+.p-kicker{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem}
 .p-hero h1{color:#fff;font-size:clamp(3rem,8vw,5.6rem);font-weight:800;letter-spacing:-.03em;line-height:.95;margin-bottom:.9rem}
-.p-hero h1 span{display:block;font-size:.34em;letter-spacing:.02em;font-weight:700;color:#f3b48f;margin-top:.7rem}
+.p-hero h1 span{display:block;font-size:.34em;letter-spacing:.02em;font-weight:700;color:var(--sky);margin-top:.7rem}
 .p-hero .p-lead{color:rgba(255,255,255,.78);font-size:1.08rem;max-width:520px;margin-bottom:1.6rem}
 .p-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
 .p-chips span{border:1px solid var(--line-dark);background:rgba(255,255,255,.05);color:#fff;border-radius:100px;padding:.38rem .85rem;font-size:.82rem;font-weight:600}
-.p-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem 1rem;border-left:3px solid var(--orange);padding:.2rem 0 .2rem 1rem;margin-bottom:1.8rem}
+.p-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem 1rem;border-left:3px solid var(--sky);padding:.2rem 0 .2rem 1rem;margin-bottom:1.8rem}
 .p-price strong{font-size:1.9rem;font-weight:800;color:#fff;white-space:nowrap}
 .p-price del{color:rgba(255,255,255,.5);font-size:.95rem}
 .p-price small{flex-basis:100%;color:rgba(255,255,255,.62);font-size:.8rem}
@@ -71,7 +85,7 @@ footer .nav-logo-word b{color:#f3b48f}
 /* sestava */
 .p-kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
 .p-kit li{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:1rem 1.1rem;font-size:.92rem;color:var(--text);display:flex;gap:.6rem}
-.p-kit li::before{content:"✓";color:#15803d;font-weight:800}
+.p-kit li::before{content:"✓";color:var(--navy-mid);font-weight:800}
 .p-kit-img{margin-top:1.6rem;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1rem;max-width:560px}
 
 /* tabulka */
@@ -85,6 +99,9 @@ footer .nav-logo-word b{color:#f3b48f}
 .p-cert{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
 .p-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm)}
 .p-card h3{margin-bottom:.6rem}
+.p-awards{display:grid;gap:.75rem}
+.p-awards li{display:grid;grid-template-columns:3.2rem 1fr;gap:.6rem;font-size:.9rem;align-items:baseline}
+.p-awards b{color:var(--orange-text);font-variant-numeric:tabular-nums}
 .p-video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000}
 .p-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -95,6 +112,7 @@ footer .nav-logo-word b{color:#f3b48f}
 .p-dealer-top{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
 .p-dealer-top img{height:46px;width:auto}
 .p-dealer-top h3{margin:0}
+.p-dealer-kraj{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-text);margin-bottom:.15rem}
 .p-dealer-top small{display:block;color:var(--text-muted);font-size:.82rem}
 .p-dealer-contact{display:grid;gap:.4rem;font-size:.93rem;margin-bottom:1.1rem}
 .p-dealer-contact a{color:var(--navy);font-weight:600}
@@ -103,11 +121,12 @@ footer .nav-logo-word b{color:#f3b48f}
 .p-dealer-area{font-size:.82rem;color:var(--text-muted)}
 .p-dealer-area b{color:var(--navy)}
 .p-dealer-side{background:var(--bg);padding:1.6rem 1.7rem;border-left:1px solid var(--gray-200);display:flex;flex-direction:column;gap:.9rem}
+.p-dealer-sidehead{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
 .p-dealer-price strong{display:block;font-size:1.7rem;font-weight:800;color:var(--orange-text);white-space:nowrap;line-height:1.1}
 .p-dealer-price del{color:var(--gray-400);font-size:.85rem}
 .p-dealer-price small{display:block;color:var(--text-muted);font-size:.76rem;margin-top:.25rem}
 .p-dealer-side ul{display:grid;gap:.3rem;font-size:.86rem}
-.p-dealer-side li::before{content:"✓ ";color:#15803d;font-weight:800}
+.p-dealer-side li::before{content:"✓ ";color:var(--navy-mid);font-weight:800}
 .p-dealer-btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto}
 .p-dealer-btns .btn{padding:.7rem 1.1rem;font-size:.88rem}
 .p-become{margin-top:2rem;padding:1.4rem 1.6rem;border:2px dashed var(--gray-200);border-radius:var(--radius-lg);display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
@@ -126,7 +145,7 @@ footer .nav-logo-word b{color:#f3b48f}
 @media (hover:hover){.p-doc:hover{border-color:var(--navy-mid)}}
 
 /* páska CTA */
-.p-band{background:var(--ink);color:#fff;padding:3.2rem 0}
+.p-band{background:var(--ink-2);color:#fff;padding:3.2rem 0}
 .p-band .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem}
 .p-band h2{color:#fff;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0}
 .p-band p{color:rgba(255,255,255,.7);margin:.3rem 0 0}
@@ -151,7 +170,7 @@ footer .nav-logo-word b{color:#f3b48f}
 }
 @media (max-width:600px){
   .p-hero{padding-top:6.2rem}
-  .nav-logo-word small{display:none}
+  .nav-logo-word small:not(.pre){display:none}
   .p-hero-img img{max-width:270px}
   .p-sec{padding:3.4rem 0}
   .p-stat b{font-size:1.25rem}

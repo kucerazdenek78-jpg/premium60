@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Leták PREMIUM 60</title>
+<!-- Zdroj letáku dokumenty/gerda-premium-60.pdf. Bez značky prodejce – místo pro razítko prodejce je dole na 1. straně.
+     PDF: python3 tools/letak.py -->
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter-Regular.ttf);font-weight:400}
+@font-face{font-family:Inter;src:url(fonts/Inter-Bold.ttf);font-weight:700}
+@page{size:A4;margin:0}
+:root{--navy:#0b263c;--navy2:#14385a;--sky:#a9cbea;--steel:#2a6aa3;--g1:#eef1f4;--g2:#dde3e9;--txt:#14202b;--mut:#536170;--ok:#15803d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;color:var(--txt);font-size:9.5pt;line-height:1.45}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always}
+.page:last-child{page-break-after:auto}
+.top{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;height:128mm;padding:14mm 14mm 0;position:relative}
+.brand{font-weight:700;letter-spacing:.32em;font-size:11pt;color:var(--sky)}
+h1{font-size:44pt;line-height:.95;letter-spacing:-.02em;margin:9mm 0 3mm;font-weight:700}
+.sub{font-size:15pt;font-weight:700;color:var(--sky)}
+.lead{color:rgba(255,255,255,.8);font-size:10.5pt;max-width:92mm;margin-top:5mm}
+.hero{position:absolute;right:8mm;bottom:0;width:72mm}
+.chips{display:flex;flex-wrap:wrap;gap:2mm;max-width:95mm;margin-top:6mm}
+.chips span{border:1px solid rgba(255,255,255,.3);border-radius:20mm;padding:1.2mm 3mm;font-size:8.5pt;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);background:var(--navy);color:#fff;padding:0 6mm}
+.stats div{text-align:center;padding:4mm 1mm;border-left:1px solid rgba(255,255,255,.14)}
+.stats div:first-child{border-left:0}
+.stats b{display:block;font-size:13pt}
+.stats span{font-size:7pt;color:rgba(255,255,255,.65);line-height:1.25;display:block;margin-top:1mm}
+.body{padding:8mm 14mm}
+h2{font-size:14pt;color:var(--navy);margin-bottom:3mm}
+.lbl{font-size:7.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:1.5mm}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:8mm;align-items:start}
+.pts{display:grid;gap:2.5mm}
+.pts div{display:grid;grid-template-columns:9mm 1fr;gap:2.5mm;align-items:start}
+.pts i{font-style:normal;width:9mm;height:9mm;border-radius:50%;background:#eaf1f8;color:var(--steel);display:grid;place-items:center;font-weight:700;font-size:8.5pt}
+.pts b{color:var(--navy)}
+.pts p{color:var(--mut);font-size:8.5pt}
+.price{margin-top:5mm;border:2px solid var(--navy);border-radius:3mm;padding:3.5mm 4mm}
+.price strong{font-size:22pt;color:var(--navy);display:block;line-height:1.1}
+.price small{color:var(--mut);font-size:8pt}
+.stamp{position:absolute;left:14mm;right:14mm;bottom:10mm;border:1.5px dashed var(--g2);border-radius:3mm;height:26mm;padding:3mm 4mm;color:var(--mut);font-size:8pt}
+.stamp b{color:var(--navy);font-size:8.5pt;letter-spacing:.12em;text-transform:uppercase}
+.decors{display:grid;grid-template-columns:repeat(6,1fr);gap:3mm;margin-top:1mm}
+.decors div{text-align:center;font-size:8pt;font-weight:700;color:var(--navy)}
+.decors img{width:100%;height:58mm;object-fit:contain;display:block;margin-bottom:1.5mm}
+.decors small{display:block;color:var(--ok);font-size:7pt}
+.extra{margin-top:3mm;font-size:8pt;color:var(--mut);display:flex;gap:4mm;align-items:center}
+.extra img{width:9mm;height:9mm;border-radius:1.5mm;object-fit:cover;vertical-align:middle;margin-right:1.5mm}
+.extra b{color:var(--navy)}
+ul.kit{list-style:none;display:grid;gap:1.6mm}
+ul.kit li{padding-left:5mm;position:relative;font-size:8.8pt}
+ul.kit li::before{content:"✓";position:absolute;left:0;color:var(--steel);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:8.3pt}
+td{padding:1.35mm 2mm;border-bottom:1px solid var(--g1);vertical-align:top}
+td:first-child{color:var(--mut);width:44%}
+td:last-child{font-weight:700;color:var(--navy)}
+.cert{background:var(--g1);border-radius:3mm;padding:3.5mm 4mm;font-size:8.5pt;color:var(--mut);margin-top:4mm}
+.cert b{color:var(--navy)}
+.foot{position:absolute;left:14mm;right:14mm;bottom:9mm;font-size:7pt;color:var(--mut);border-top:1px solid var(--g2);padding-top:2mm}
+.fig{border:1px solid var(--g2);border-radius:3mm;padding:2mm;background:#fff}
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="top">
+    <div class="brand">BEZPEČNOSTNÍ DVEŘE</div>
+    <h1>PREMIUM 60</h1>
+    <div class="sub">Do bytu · RC3 · EI 60 · výrobce GERDA</div>
+    <p class="lead">Celokovové bezpečnostní dveře, které zároveň 60 minut odolají požáru. Silnější plech, aktivní čep i nahoře a certifikace NBÚ ČR.</p>
+    <div class="chips"><span>RC3</span><span>EI 60</span><span>42 dB</span><span>Plech 1,2 mm</span><span>NBÚ ČR + Trezor test</span></div>
+    <img class="hero" src="../img/rez-dveri.png" alt="">
+  </div>
+  <div class="stats">
+    <div><b>RC3</b><span>bezpečnostní třída</span></div>
+    <div><b>EI 60</b><span>minut požární odolnosti</span></div>
+    <div><b>60 mm</b><span>tloušťka křídla</span></div>
+    <div><b>42 dB</b><span>odhlučnění</span></div>
+    <div><b>1,2 mm</b><span>plech, o 71 % silnější než standard</span></div>
+    <div><b>8 + 6</b><span>aktivních čepů + pevných trnů</span></div>
+  </div>
+  <div class="body">
+    <div class="two">
+      <div>
+        <div class="lbl">Konstrukce</div>
+        <h2>Jistí i nahoře</h2>
+        <div class="pts">
+          <div><i>8</i><p><b>Aktivní čepy</b> – 7 vodorovných a 1 svislý nahoře.</p></div>
+          <div><i>6</i><p><b>Pevné trny</b> proti vylomení na straně závěsů.</p></div>
+          <div><i>3</i><p><b>Závěsy 3D</b> – seřiditelné ve třech směrech.</p></div>
+          <div><i>1,2</i><p><b>Plech 1,2 mm</b>, bezpečnostní zárubeň š. 105 mm s těsněním.</p></div>
+        </div>
+        <div class="price"><strong>42 500 Kč</strong><small>Cena kompletu vč. montáže na klíč a 12 % DPH. Místní akce u prodejce.</small></div>
+      </div>
+      <div class="fig"><img src="../img/rez-letak.jpg" alt="" style="width:100%;max-height:92mm;object-fit:contain;display:block"></div>
+    </div>
+  </div>
+  <div class="stamp"><b>Váš prodejce</b></div>
+</section>
+
+<section class="page">
+  <div class="body" style="padding-top:12mm">
+    <div class="lbl">Dekory</div>
+    <h2>Šest dekorů skladem · šíře 80 cm</h2>
+    <div class="decors">
+      <div><img src="../img/dekor-orech.jpg" alt="">Ořech<small>skladem</small></div>
+      <div><img src="../img/dekor-dub.jpg" alt="">Dub<small>skladem</small></div>
+      <div><img src="../img/dekor-svetle-wenge.jpg" alt="">Světlé wenge<small>skladem</small></div>
+      <div><img src="../img/dekor-bila.jpg" alt="">Bílá<small>skladem</small></div>
+      <div><img src="../img/dekor-cerna-perlet.jpg" alt="">Černá perleť<small>skladem</small></div>
+      <div><img src="../img/dekor-antracit.jpg" alt="">Antracit<small>skladem</small></div>
+    </div>
+    <div class="extra"><b>Na objednávku:</b><span><img src="../img/barvy/premium-60-bila-wenge.png" alt="">Bílá wenge</span><span><img src="../img/barvy/premium-60-ocelove-seda.png" alt="">Ocelově šedá</span><span>příplatkové, 8–12 týdnů</span></div>
+
+    <div class="two" style="margin-top:7mm">
+      <div>
+        <div class="lbl">Sestava</div>
+        <h2>Komplet, ne jen křídlo</h2>
+        <ul class="kit">
+          <li>Křídlo RC3 EI 60 s kouřovou páskou a celoobvodovým těsněním</li>
+          <li>Bezpečnostní zárubeň š. 105 mm ve stejném dekoru</li>
+          <li>Práh ve stejném dekoru s těsněním</li>
+          <li>Bezpečnostní kování RC3 – klika/koule, inox nebo černé</li>
+          <li>Bezpečnostní vložka s 5 klíči + 2 instalační klíče</li>
+          <li>Panoramatické kukátko v barvě kování</li>
+        </ul>
+        <div class="fig" style="margin-top:4mm"><img src="../img/kovani-letak.jpg" alt="" style="width:100%;display:block"></div>
+      </div>
+      <div>
+        <div class="lbl">Technické parametry</div>
+        <table>
+          <tr><td>Bezpečnostní třída</td><td>RC3 (PN–ENV–1627 : 2012)</td></tr>
+          <tr><td>Protipožárnost</td><td>EI 60 minut + kouřová páska</td></tr>
+          <tr><td>Tloušťka křídla</td><td>60 mm</td></tr>
+          <tr><td>Odhlučnění</td><td>42 dB</td></tr>
+          <tr><td>Aktivní čepy</td><td>8 ks (7 vodorovných + 1 svislý)</td></tr>
+          <tr><td>Pevné trny</td><td>6 ks</td></tr>
+          <tr><td>Závěsy</td><td>3 ks tříprvkové 3D</td></tr>
+          <tr><td>Tloušťka plechu</td><td>1,2 mm</td></tr>
+          <tr><td>Tepelná propustnost</td><td>1,2 W/m²K</td></tr>
+          <tr><td>Šířka dveří</td><td>80 cm</td></tr>
+          <tr><td>Zárubeň</td><td>bezpečnostní, š. 105 mm</td></tr>
+          <tr><td>Vložka</td><td>5 klíčů + 2 instalační</td></tr>
+          <tr><td>Kukátko</td><td>panoramatické</td></tr>
+        </table>
+        <div class="cert"><b>Certifikace NBÚ ČR + Trezor test s.r.o.</b><br>Dveře splňují české bezpečnostní normy. Z výroby připraveno pro chytrý zámek tedee PRO.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">Výrobce: GERDA Sp. z o.o., Polsko. Ceny, montáž a záruční podmínky určuje prodejce. Údaje platné k 10/2026.</div>
+</section>
+
+</body>
+</html>
