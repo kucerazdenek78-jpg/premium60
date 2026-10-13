@@ -7,7 +7,7 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib
 
 BASE = 'https://kucerazdenek78-jpg.github.io/premium60/'   # TODO: vlastní doména, např. https://premium60.cz/
-VER = '20261013d'                                            # zvýšit při změně CSS/JS
+VER = '20261013e'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 NAV = [('index.html#parametry', 'Parametry', 'parametry'),
@@ -83,12 +83,11 @@ FOOT = '''
         <div class="footer-links">
           <a href="servis-a-dokumenty.html">Servis a dokumenty</a>
           <a href="dokumenty/premium-60-letak.pdf" target="_blank" rel="noopener">Leták PREMIUM 60 (PDF)</a>
-          <a href="https://bezpecne-dvere.cz/zasady-osobnich-udaju.html" target="_blank" rel="noopener">Zásady osobních údajů</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom" style="flex-direction:column;align-items:flex-start;gap:.6rem">
-      <p class="p-disclaimer">PREMIUM 60 vyrábí GERDA Sp. z o.o. (Polsko). Tento web provozuje prodejce, nejde o oficiální web výrobce. Ceny, montáž a záruční podmínky určuje vždy konkrétní prodejce.</p>
+      <p class="p-disclaimer">PREMIUM 60 vyrábí GERDA Sp. z o.o. (Polsko). Tento web provozuje prodejce, nejde o oficiální web výrobce. Ceny, montáž a záruční podmínky určuje vždy konkrétní prodejce, který dveře i servisuje.</p>
       <span>© <span class="cy">2026</span> Provozovatel webu: Zdeněk Kučera, IČ 64682676, DIČ CZ7801242768, Zd. Štěpánka 2764/1, 434 01 Most</span>
     </div>
   </div>
@@ -108,6 +107,8 @@ def build():
         m = re.match(r'<!--\s*(\{.*?\})\s*-->\n', text, re.S)
         meta = json.loads(m.group(1)); body = text[m.end():]
         name = src.name
+        if '<!--MAPA-->' in body:
+            body = body.replace('<!--MAPA-->', (ROOT / 'tools' / 'mapa-kraju.svg').read_text(encoding='utf-8'))
         url = BASE + ('' if name == 'index.html' else name)
         nav = '\n'.join('        <li class="nav-item"><a href="{h}" class="nav-link{a}">{t}</a></li>'.format(
             h=h, t=t, a=' active' if meta.get('nav') == k else '') for h, t, k in NAV)

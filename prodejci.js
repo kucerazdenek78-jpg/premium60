@@ -1,6 +1,6 @@
 /* Seznam prodejců PREMIUM 60 – jediné místo, kde se prodejci zapisují. Pořadí = pořadí na webu.
    Nového prodejce přidáte zkopírováním celého bloku { … } a úpravou údajů.
-   kraj = nadpis karty. Web sám poptávky ani akce nemá – akce = odkaz na místní akce prodejce,
+   kraj = nadpis karty a vybarvený kraj na mapě (mapa_kraje = víc krajů). Web sám poptávky ani akce nemá – akce = odkaz na místní akce prodejce,
    poptavka = odkaz na poptávku/objednávku u prodejce.
    Bezpečné dveře: údaje z bezpecne-dvere.cz; K.V. DOORS: údaje z kvdoors.cz/kontakt (stav 13. 10. 2026). */
 window.PRODEJCI = [
@@ -45,6 +45,7 @@ window.PRODEJCI = [
   {
     id: 'stredocesky-kraj',
     kraj: 'Středočeský kraj',
+    mapa_kraje: ['Středočeský kraj', 'Hlavní město Praha'],   // vybarvení na mapě (výchozí = kraj)
     nazev: 'Bezpečné dveře',
     podtitul: 'Prodejna a vzorkovna, Most',
     adresa: 'Obchodní 36, 434 01 Most',

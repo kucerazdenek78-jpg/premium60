@@ -8,6 +8,10 @@ Samostatný **produktový web** bezpečnostních dveří PREMIUM 60 (výrobce GE
   Poptávky, objednávky a místní akce mají prodejci u sebe – web na ně odkazuje z karty prodejce.
 - **Značku Bezpečné dveře nikde neuvádět**, jen v kartě prodejce pro Ústecký kraj (`prodejci.js`).
   V patičce zůstává jen „Provozovatel webu: Zdeněk Kučera, IČ…“ (povinný údaj) a že nejde o oficiální web výrobce.
+- **Servis** (záruka, reklamace, klíče) dělá vždy prodejce, u kterého zákazník dveře koupil – stránka servisu jen vypisuje prodejce.
+- Mapa krajů (`tools/mapa-kraju.svg`, vkládá ji `sestav.py` místo `<!--MAPA-->`) se vybarví podle `prodejci.js`
+  (`kraj`, případně `mapa_kraje`). Zdroj hranic: github.com/siwekm/czech-geojson (kraje.json), zjednodušeno.
+- Výbava „Základ / Na přání“ (#vybava) je z gerda.pl/cs (PREMIUM 60), **bez balíčku ELITE**.
 - GERDA a její ocenění (sekce #vyrobce) jen jako informace o výrobci. Ocenění ověřena z budownictwo.org (10/2026).
 
 ## Struktura

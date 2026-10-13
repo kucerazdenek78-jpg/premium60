@@ -42,6 +42,31 @@
   document.querySelectorAll('[data-kraje]').forEach(function (el) {
     el.innerHTML = P.map(function (p) { return '<a href="kde-koupit.html#' + esc(p.id) + '">' + esc(p.kraj) + '</a>'; }).join('');
   });
+  /* mapa krajů: vybarvit kraje s prodejcem, klik = karta prodejce */
+  var kraje = {};
+  P.forEach(function (p) { (p.mapa_kraje || [p.kraj]).forEach(function (k) { kraje[k] = p; }); });
+  document.querySelectorAll('.p-map [data-kraj]').forEach(function (el) {
+    var p = kraje[el.getAttribute('data-kraj')]; if (!p) return;
+    el.classList.add('on');
+    if (el.tagName.toLowerCase() === 'path') {
+      el.setAttribute('tabindex', '0'); el.setAttribute('role', 'link');
+      var go = function () { location.href = 'kde-koupit.html#' + p.id; };
+      el.addEventListener('click', go);
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter') go(); });
+      var t = el.querySelector('title'); if (t) t.textContent = el.getAttribute('data-kraj') + ' – ' + p.nazev;
+    }
+  });
+  document.querySelectorAll('[data-map-legend]').forEach(function (el) {
+    el.innerHTML = P.map(function (p) { return '<a href="kde-koupit.html#' + esc(p.id) + '"><i></i><b>' + esc(p.kraj) + '</b><span>' + esc(p.nazev) + ' · ' + esc(p.adresa.split(',').pop().trim().replace(/^\d{3} \d{2} /, '')) + '</span></a>'; }).join('');
+  });
+  document.querySelectorAll('[data-servis]').forEach(function (el) {
+    el.innerHTML = P.map(function (p) {
+      return '<div class="p-doc"><span class="p-dealer-kraj">' + esc(p.kraj) + '</span><b>' + esc(p.nazev) + '</b>' +
+        '<p>' + (p.telefon ? '📞 <a href="' + tel(p.telefon) + '" style="color:var(--navy);font-weight:700">' + esc(p.telefon) + '</a><br>' : '') +
+        (p.email ? '✉️ <a href="mailto:' + esc(p.email) + '">' + esc(p.email) + '</a>' : '') + '</p>' +
+        (p.web ? '<a class="more" href="' + esc(p.web) + '" target="_blank" rel="noopener">Web prodejce →</a>' : '') + '</div>';
+    }).join('');
+  });
   document.querySelectorAll('[data-pocet-prodejcu]').forEach(function (el) {
     var n = P.length; el.textContent = n + (n === 1 ? ' prodejce' : (n < 5 ? ' prodejci' : ' prodejců'));
   });
