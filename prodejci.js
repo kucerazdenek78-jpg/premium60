@@ -45,7 +45,9 @@ window.PRODEJCI = [
   {
     id: 'stredocesky-kraj',
     kraj: 'Středočeský kraj',
-    mapa_kraje: ['Středočeský kraj', 'Hlavní město Praha'],   // vybarvení na mapě (výchozí = kraj)
+    krajPozn: 'po Prahu',
+    mapa_kraje: ['Středočeský kraj – do 120 km od Mostu', 'Hlavní město Praha'],   // jen část kraje po Prahu (tools/mapa-kraju.svg)
+    oblast: ['Praha a západní část Středočeského kraje do cca 120 km od Mostu'],
     nazev: 'Bezpečné dveře',
     podtitul: 'Prodejna a vzorkovna, Most',
     adresa: 'Obchodní 36, 434 01 Most',

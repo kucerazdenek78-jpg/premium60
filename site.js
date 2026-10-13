@@ -57,7 +57,7 @@
     }
   });
   document.querySelectorAll('[data-map-legend]').forEach(function (el) {
-    el.innerHTML = P.map(function (p) { return '<a href="kde-koupit.html#' + esc(p.id) + '"><i></i><b>' + esc(p.kraj) + '</b><span>' + esc(p.nazev) + ' · ' + esc(p.adresa.split(',').pop().trim().replace(/^\d{3} \d{2} /, '')) + '</span></a>'; }).join('');
+    el.innerHTML = P.map(function (p) { return '<a href="kde-koupit.html#' + esc(p.id) + '"><i></i><b>' + esc(p.kraj) + (p.krajPozn ? ' <small>(' + esc(p.krajPozn) + ')</small>' : '') + '</b><span>' + esc(p.nazev) + ' · ' + esc(p.adresa.split(',').pop().trim().replace(/^\d{3} \d{2} /, '')) + '</span></a>'; }).join('');
   });
   document.querySelectorAll('[data-servis]').forEach(function (el) {
     el.innerHTML = P.map(function (p) {
