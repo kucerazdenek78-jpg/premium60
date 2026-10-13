@@ -160,7 +160,7 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
 .p-become p{margin:0;max-width:640px}
 
 /* realizace */
-.p-gallery{display:grid;grid-template-columns:repeat(7,1fr);gap:.6rem}
+.p-gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem}
 .p-gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius)}
 
 /* dokumenty */
@@ -192,7 +192,7 @@ footer .nav-logo-word b,footer .nav-logo-word small.pre{color:var(--sky)}
   .p-stat:nth-child(4){border-left:0}
   .p-stat:nth-child(n+4){border-top:1px solid var(--line-dark)}
   .p-decors{grid-template-columns:repeat(3,1fr)}
-  .p-gallery{grid-template-columns:repeat(4,1fr)}
+  .p-gallery{grid-template-columns:repeat(3,1fr)}
   .p-dealer-side{border-left:0;border-top:1px solid var(--gray-200)}
 }
 @media (max-width:600px){
