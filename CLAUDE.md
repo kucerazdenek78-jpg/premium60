@@ -17,7 +17,7 @@ Samostatný **produktový web** bezpečnostních dveří PREMIUM 60 (výrobce GE
 ## Struktura
 - `src/*.html` = obsah stránek. **Needitovat přímo HTML v kořeni** – po změně v `src/` spustit `python3 tools/sestav.py`
   (doplní hlavičku, menu, patičku, sitemap.xml a robots.txt).
-- `tools/sestav.py`: `BASE` = adresa webu (při přechodu na vlastní doménu změnit + přidat soubor CNAME),
+- `tools/sestav.py`: `BASE` = adresa webu (https://premium60.cz/, doména u Forpsi, soubor CNAME),
   `VER` = verze CSS/JS (zvýšit při každé změně `*.css` / `*.js`).
 - `prodejci.js` = seznam prodejců po krajích (karty na úvodu a na Kde koupit). Nový prodejce = nový blok.
 - `style.css` = kopie základu z bezpecne-dvere.cz, `premium.css` = vzhled tohoto webu (barvy podle loga GERDA: #0b263c).
