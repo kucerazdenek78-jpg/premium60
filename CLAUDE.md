@@ -25,6 +25,15 @@ Samostatný **produktový web** bezpečnostních dveří PREMIUM 60 (výrobce GE
   PDF vytvoří `python3 tools/letak.py`.
 - Fotky dekorů, schéma čepů a kování jsou výřezy z původního letáku Bezpečných dveří (bez loga).
 
+## SEO
+- `sestav.py` generuje meta tagy (title ≤ 65 znaků, description ≤ 160), Open Graph/Twitter, `robots`, sitemap s `lastmod`
+  a JSON-LD: BreadcrumbList všude, na úvodu WebSite + Product (cena 42 500 Kč) + FAQPage (z `<details>` v sekci #otazky),
+  na Kde koupit ItemList prodejců (LocalBusiness) z `prodejci.js`.
+- Po sestavení `prerender()` (Playwright) vloží karty prodejců, mapu a legendu přímo do HTML, aby je vyhledávače viděly bez JS.
+- Interní odkazy na úvod jsou `./` (ne `index.html`), shodně s canonical.
+- Obrázky: velké fotky ve WebP, všechny `<img>` mají width/height; písmo Inter přes `<link>` (ne @import).
+- FAQ jen z ověřených údajů na webu – nic nepřidávat bez zdroje.
+
 ## Údaje o dveřích
 Zdroj pravdy = `dvere-do-bytu.html` na bezpecne-dvere.cz (sekce #premium60). Při rozporu s letákem
 použít web a upozornit Zdenka.
