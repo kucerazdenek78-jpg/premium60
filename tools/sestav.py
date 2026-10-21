@@ -7,7 +7,7 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib, subprocess, datetime
 
 BASE = 'https://premium60.cz/'
-VER = '20261014a'                                            # zvýšit při změně CSS/JS
+VER = '20261021a'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 NAV = [('index.html#parametry', 'Parametry', 'parametry'),
@@ -94,6 +94,7 @@ FOOT = '''
         <div class="footer-links">
           <a href="servis-a-dokumenty.html">Servis a dokumenty</a>
           <a href="dokumenty/premium-60-letak.pdf" target="_blank" rel="noopener">Leták PREMIUM 60 (PDF)</a>
+          <a href="servis-a-dokumenty.html#certifikaty">Certifikáty ke stažení</a>
         </div>
       </div>
     </div>
@@ -149,7 +150,7 @@ def jsonld(name, meta, url):
                 {'@type': 'PropertyValue', 'name': 'Tloušťka křídla', 'value': '60 mm'},
                 {'@type': 'PropertyValue', 'name': 'Tloušťka plechu', 'value': '1,2 mm'},
                 {'@type': 'PropertyValue', 'name': 'Tepelná propustnost', 'value': '1,2 W/m²K'},
-                {'@type': 'PropertyValue', 'name': 'Certifikace', 'value': 'NBÚ ČR, Trezor test s.r.o.'}],
+                {'@type': 'PropertyValue', 'name': 'Certifikace', 'value': 'NBÚ ČR T0030/2026, TREZOR TEST TT-120/2026, PAVUS 216/C5/2024/0015'}],
             'offers': {'@type': 'AggregateOffer', 'priceCurrency': 'CZK', 'lowPrice': 42500, 'highPrice': 42500,
                        'offerCount': len(P), 'availability': 'https://schema.org/InStock',
                        'description': 'Cena kompletu vč. montáže na klíč a 12 % DPH. Prodejci mohou mít místní akce.'}})
