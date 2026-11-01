@@ -7,7 +7,7 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib, subprocess, datetime
 
 BASE = 'https://premium60.cz/'
-VER = '20261021a'                                            # zvýšit při změně CSS/JS
+VER = '20261101a'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 NAV = [('index.html#parametry', 'Parametry', 'parametry'),
@@ -40,9 +40,8 @@ HEAD = '''<!DOCTYPE html>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">{preload}
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>{preload}
   <link rel="stylesheet" href="style.css?v={ver}">
   <link rel="stylesheet" href="premium.css?v={ver}">{css}{robots}{jsonld}
 </head>

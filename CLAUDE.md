@@ -31,7 +31,7 @@ Samostatný **produktový web** bezpečnostních dveří PREMIUM 60 (výrobce GE
   na Kde koupit ItemList prodejců (LocalBusiness) z `prodejci.js`.
 - Po sestavení `prerender()` (Playwright) vloží karty prodejců, mapu a legendu přímo do HTML, aby je vyhledávače viděly bez JS.
 - Interní odkazy na úvod jsou `./` (ne `index.html`), shodně s canonical.
-- Obrázky: velké fotky ve WebP, všechny `<img>` mají width/height; písmo Inter přes `<link>` (ne @import).
+- Obrázky: velké fotky ve WebP, všechny `<img>` mají width/height; písmo Inter hostované na webu (`fonts/`, @font-face v `premium.css`) – žádné Google Fonts (GDPR).
 - FAQ jen z ověřených údajů na webu – nic nepřidávat bez zdroje.
 
 ## Údaje o dveřích
