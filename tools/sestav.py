@@ -7,11 +7,12 @@ Při přechodu na vlastní doménu stačí změnit BASE (a doplnit soubor CNAME)
 import json, re, pathlib, subprocess, datetime
 
 BASE = 'https://premium60.cz/'
-VER = '20261101a'                                            # zvýšit při změně CSS/JS
+VER = '20261112a'                                            # zvýšit při změně CSS/JS
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 NAV = [('index.html#parametry', 'Parametry', 'parametry'),
        ('index.html#dekory', 'Dekory', 'dekory'), ('kde-koupit.html', 'Kde koupit', 'kde-koupit'),
+       ('rady.html', 'Rady', 'rady'),
        ('servis-a-dokumenty.html', 'Servis a dokumenty', 'servis')]
 
 HEAD = '''<!DOCTYPE html>
