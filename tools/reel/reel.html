@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Reel PREMIUM 60</title>
+<!-- Reel 1080×1920 pro Instagram/Facebook. Snímkuje tools/reel/reel.py (window.render(t) v sekundách). -->
+<style>
+@font-face{font-family:'Inter';font-weight:100 900;src:url(../../fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-weight:100 900;src:url(../../fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--navy:#0b263c;--navy2:#14385a;--steel:#2a6aa3;--sky:#a9cbea;--sand:#efe8de;--sand2:#e3d8ca;--wood:#8a6a4a;--txt:#14202b}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000;font-family:Inter,Arial,sans-serif}
+.sc{position:absolute;inset:0;opacity:0;overflow:hidden}
+.sand{background:radial-gradient(900px 900px at 60% 55%,#fbf8f3 0%,transparent 70%),linear-gradient(170deg,var(--sand) 0%,var(--sand2) 100%)}
+.navy{background:radial-gradient(1100px 900px at 75% 25%,#1f4c74 0%,transparent 65%),linear-gradient(165deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+.white{background:linear-gradient(180deg,#fff 0%,#eef2f6 100%)}
+.a{position:absolute;will-change:transform,opacity}
+.kick{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:34px}
+.h1{font-weight:800;letter-spacing:-.03em;line-height:.92}
+.c{left:0;right:0;text-align:center}
+/* S1 */
+#s1 .kick{top:250px;color:var(--wood)}
+#s1 .h1{top:310px;font-size:170px;color:var(--navy)}
+#s1 .sub{top:500px;font-size:54px;font-weight:700;color:var(--wood)}
+#s1 .door{left:50%;top:640px;width:560px;margin-left:-280px;filter:drop-shadow(0 40px 40px rgba(60,40,20,.3))}
+/* S2 */
+#s2 .kick{top:280px;color:var(--sky)}
+.stat{left:90px;right:90px;border-top:2px solid rgba(255,255,255,.18);padding-top:34px}
+.stat b{display:block;font-size:190px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.stat span{display:block;font-size:46px;color:rgba(255,255,255,.75);margin-top:10px}
+#st1{top:380px}#st2{top:740px}#st3{top:1100px}
+#s2 .foot{top:1460px;font-size:40px;color:var(--sky);font-weight:700}
+/* S3 */
+#s3 .kick{top:250px;color:var(--steel)}
+#s3 .h1{top:310px;font-size:104px;color:var(--navy)}
+#s3 .rez{left:50%;top:560px;width:580px;margin-left:-290px}
+.badges{top:1380px;display:flex;justify-content:center;gap:24px}
+.badge{background:var(--navy);color:#fff;border-radius:22px;padding:22px 30px;font-size:40px;font-weight:800;opacity:0}
+/* S4 */
+#s4 .kick{top:240px;color:var(--wood)}
+#s4 .h1{top:300px;font-size:120px;color:var(--navy)}
+.grid{position:absolute;left:90px;right:90px;top:520px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px 30px}
+.dek{text-align:center;opacity:0}
+.dek img{width:100%;height:470px;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(60,40,20,.2))}
+.dek b{display:block;font-size:34px;color:var(--navy);margin-top:12px}
+/* S5 */
+#s5 .kick{top:330px;color:var(--sky)}
+#s5 .h1{top:400px;font-size:116px}
+#s5 .price{top:700px;font-size:220px;font-weight:800;letter-spacing:-.04em;color:#fff}
+#s5 .pr2{top:960px;font-size:46px;color:var(--sky);font-weight:700}
+.kit{left:120px;right:120px;top:1110px;display:grid;gap:22px}
+.kit div{font-size:44px;color:#fff;opacity:0}
+.kit div::before{content:"✓  ";color:var(--sky);font-weight:800}
+/* S6 */
+#s6 .kick{top:250px;color:var(--steel)}
+#s6 .h1{top:310px;font-size:110px;color:var(--navy)}
+#s6 .map{left:40px;width:1000px;top:640px}
+.p-map .kraj{fill:#d6dde4;stroke:#fff;stroke-width:1.6;stroke-linejoin:round}
+.p-map .kraj-lbl{display:none}
+.krl{position:absolute;left:90px;right:90px;top:1230px;display:grid;gap:18px}
+.krl div{font-size:48px;font-weight:800;color:var(--navy);opacity:0}
+.krl div i{display:inline-block;width:34px;height:34px;border-radius:8px;background:var(--steel);margin-right:20px;vertical-align:-3px}
+#s6 .note{top:1560px;font-size:40px;color:var(--wood);font-weight:700}
+/* S7 */
+#s7 .door{left:50%;top:230px;width:400px;margin-left:-200px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+#s7 .h1{top:1100px;font-size:150px}
+#s7 .h1 span{color:var(--sky)}
+#s7 .url{top:1300px;font-size:92px;font-weight:800;color:#fff}
+#s7 .url u{text-decoration:none;border-bottom:8px solid var(--sky);padding-bottom:6px}
+#s7 .sub{top:1470px;font-size:44px;color:rgba(255,255,255,.8)}
+</style>
+</head>
+<body>
+
+<section class="sc sand" id="s1">
+  <div class="a c kick">Bezpečnostní dveře do bytu</div>
+  <div class="a c h1">PREMIUM 60</div>
+  <div class="a c sub">RC3 · EI 60 · 42 dB</div>
+  <img class="a door" src="../../img/premium60-dvere.webp" alt="">
+</section>
+
+<section class="sc navy" id="s2">
+  <div class="a c kick">Co v nich je</div>
+  <div class="a stat" id="st1"><b>RC3</b><span>bezpečnostní třída proti vloupání</span></div>
+  <div class="a stat" id="st2"><b>EI 60</b><span>požární odolnost ze strany závěsů</span></div>
+  <div class="a stat" id="st3"><b>42 dB</b><span>odhlučnění</span></div>
+  <div class="a c foot">plech 1,2 mm · 8 aktivních čepů</div>
+</section>
+
+<section class="sc white" id="s3">
+  <div class="a c kick">Bezpečnost i požární odolnost</div>
+  <div class="a c h1">Certifikováno<br>v Česku</div>
+  <img class="a rez" src="../../img/rez-dveri.webp" alt="">
+  <div class="a c badges"><span class="badge">NBÚ ČR</span><span class="badge">TREZOR TEST</span><span class="badge">PAVUS</span></div>
+</section>
+
+<section class="sc sand" id="s4">
+  <div class="a c kick">Skladem ve 6 dekorech</div>
+  <div class="a c h1">Vyberte si</div>
+  <div class="grid">
+    <div class="dek"><img src="../../img/dekor-orech.jpg" alt=""><b>Ořech</b></div>
+    <div class="dek"><img src="../../img/dekor-dub.jpg" alt=""><b>Dub</b></div>
+    <div class="dek"><img src="../../img/dekor-svetle-wenge.jpg" alt=""><b>Světlé wenge</b></div>
+    <div class="dek"><img src="../../img/dekor-bila.jpg" alt=""><b>Bílá</b></div>
+    <div class="dek"><img src="../../img/dekor-cerna-perlet.jpg" alt=""><b>Černá perleť</b></div>
+    <div class="dek"><img src="../../img/dekor-antracit.jpg" alt=""><b>Antracit</b></div>
+  </div>
+</section>
+
+<section class="sc navy" id="s5">
+  <div class="a c kick">Komplet s montáží na klíč</div>
+  <div class="a c h1">Celé dveře za</div>
+  <div class="a c price" id="price">42 500 Kč</div>
+  <div class="a c pr2">vč. 12 % DPH a montáže</div>
+  <div class="a kit">
+    <div>křídlo a bezpečnostní zárubeň</div>
+    <div>práh, kování RC3, kukátko</div>
+    <div>vložka s 5 klíči</div>
+    <div>montáž na klíč</div>
+  </div>
+</section>
+
+<section class="sc white" id="s6">
+  <div class="a c kick">Kde je koupíte</div>
+  <div class="a c h1">Místní<br>prodejci</div>
+  <div class="a map"><!--MAPA--></div>
+  <div class="krl">
+    <div><i></i>Ústecký kraj</div>
+    <div><i></i>Karlovarský kraj</div>
+    <div><i></i>Středočeský kraj po Prahu</div>
+  </div>
+  <div class="a c note">Sledujte místní akce prodejců</div>
+</section>
+
+<section class="sc navy" id="s7">
+  <img class="a door" src="../../img/premium60-dvere.webp" alt="">
+  <div class="a c h1">PREMIUM <span>60</span></div>
+  <div class="a c url"><u>premium60.cz</u></div>
+  <div class="a c sub">Najděte prodejce ve svém kraji</div>
+</section>
+
+<script>
+const SC=[['s1',0,3.6],['s2',3.6,7.4],['s3',7.4,11],['s4',11,14.8],['s5',14.8,18.6],['s6',18.6,22.6],['s7',22.6,26.5]];
+window.DURATION=26.5;
+const XF=0.45; // prolínání scén
+const cl=(x)=>Math.max(0,Math.min(1,x));
+const eo=(x)=>1-Math.pow(1-cl(x),3);           // ease-out
+const eio=(x)=>{x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+// prvek se vynoří: od lokálního času t0, délka d, posun dy px, volitelně zvětšení
+function rise(el,t,t0,d=.6,dy=60,sc0=1){const p=eo((t-t0)/d);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*dy}px) scale(${sc0+(1-sc0)*p})`;}
+const MAP_ON=['Ústecký kraj','Karlovarský kraj','Středočeský kraj – do 120 km od Mostu','Hlavní město Praha'];
+window.render=function(T){
+  for(const [id,a,b] of SC){
+    const el=document.getElementById(id);
+    // nová scéna leží nad předchozí a prolne se přes ni během XF před svým začátkem; stará zmizí až po konci
+    let o = (T<a-XF||T>b&&b<window.DURATION) ? 0 : (a===0?1:cl((T-(a-XF))/XF));
+    el.style.opacity=o; el.style.display=o>0?'block':'none';
+    const t=T-a;
+    if(o<=0) continue;
+    if(id==='s1'){rise($('#s1 .kick'),t,.1);rise($('#s1 .h1'),t,.25,.7,80);rise($('#s1 .sub'),t,.5);
+      const d=$('#s1 .door');const p=eo(t/1.2);d.style.opacity=p;d.style.transform=`translateY(${(1-p)*220}px) scale(${1+0.04*cl(t/3.6)})`;}
+    if(id==='s2'){rise($('#s2 .kick'),t,.1);rise($('#st1'),t,.3,.6,90);rise($('#st2'),t,.9,.6,90);rise($('#st3'),t,1.5,.6,90);rise($('#s2 .foot'),t,2.2);}
+    if(id==='s3'){rise($('#s3 .kick'),t,.1);rise($('#s3 .h1'),t,.25,.7,80);
+      const r=$('#s3 .rez');const p=eo(t/1);r.style.opacity=p;r.style.transform=`scale(${.9+.1*p+0.04*cl(t/3.6)})`;
+      $$('#s3 .badge').forEach((b,i)=>rise(b,t,1.3+i*.35,.5,40,.8));$('#s3 .badges').style.opacity=1;}
+    if(id==='s4'){rise($('#s4 .kick'),t,.1);rise($('#s4 .h1'),t,.25,.7,80);$$('#s4 .dek').forEach((b,i)=>rise(b,t,.6+i*.22,.55,70,.92));}
+    if(id==='s5'){rise($('#s5 .kick'),t,.1);rise($('#s5 .h1'),t,.3,.7,80);
+      const pr=$('#price');const p=eo((t-.7)/1.1);pr.style.opacity=cl((t-.7)/.3);pr.style.transform=`scale(${.85+.15*p})`;
+      pr.textContent=(Math.round(42500*p/100)*100).toLocaleString('cs-CZ').replace(/\s/g,' ')+' Kč';
+      rise($('#s5 .pr2'),t,1.6);$('#s5 .kit').style.opacity=1;$$('#s5 .kit div').forEach((b,i)=>rise(b,t,2+i*.25,.5,30));}
+    if(id==='s6'){rise($('#s6 .kick'),t,.1);rise($('#s6 .h1'),t,.25,.7,80);rise($('#s6 .map'),t,.4,.6,40);
+      MAP_ON.forEach((k,i)=>{const p=cl((t-(1+Math.min(i,2)*.45))/.4);$$(`.p-map .kraj[data-kraj="${k}"]`).forEach(e=>e.style.fill=p>0?`color-mix(in srgb, #2a6aa3 ${p*100}%, #d6dde4)`:'');});
+      $$('.krl div').forEach((b,i)=>rise(b,t,1+i*.45,.5,30));rise($('#s6 .note'),t,2.7);}
+    if(id==='s7'){const d=$('#s7 .door');const p=eo(t/1);d.style.opacity=p;d.style.transform=`translateY(${(1-p)*120}px) scale(${1+.03*cl(t/3.9)})`;
+      rise($('#s7 .h1'),t,.4,.7,80);rise($('#s7 .url'),t,.8,.7,60,.9);rise($('#s7 .sub'),t,1.3);}
+  }
+};
+window.render(0);
+</script>
+</body>
+</html>
