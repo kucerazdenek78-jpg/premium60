@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="cs"><head><meta charset="UTF-8"><title>Facebook PREMIUM 60</title>
+<!-- Grafika pro FB stránku PREMIUM 60: #profil 720×720, #titulka 1640×924 (bezpečný střed 1640×624), #prispevek 1080×1350. Snímkuje fb.py. -->
+<style>
+@font-face{font-family:'Inter';font-weight:100 900;src:url(../../fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-weight:100 900;src:url(../../fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,Arial,sans-serif;background:#ccc}
+.box{position:relative;overflow:hidden;margin-bottom:20px}
+.navy{background:radial-gradient(900px 700px at 75% 25%,#1f4c74 0%,transparent 65%),linear-gradient(165deg,#0b263c 0%,#14385a 100%);color:#fff}
+.sand{background:radial-gradient(900px 700px at 70% 50%,#fbf8f3 0%,transparent 70%),linear-gradient(170deg,#efe8de 0%,#e3d8ca 100%)}
+#profil{width:720px;height:720px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#profil .p{font-weight:800;font-size:132px;letter-spacing:-.03em;line-height:.9}
+#profil .n{font-weight:800;font-size:330px;letter-spacing:-.05em;line-height:.85;color:#a9cbea}
+#profil .s{font-weight:700;font-size:34px;letter-spacing:.22em;color:rgba(255,255,255,.7);margin-top:26px}
+#titulka{width:1640px;height:924px}
+#titulka .txt{position:absolute;left:150px;top:230px;width:1100px}
+#titulka .k{font-weight:700;letter-spacing:.2em;font-size:30px;color:#8a6a4a;text-transform:uppercase}
+#titulka h1{font-weight:800;font-size:140px;white-space:nowrap;letter-spacing:-.03em;color:#0b263c;line-height:.95;margin:14px 0 18px}
+#titulka h1 span{color:#2a6aa3}
+#titulka .chips{display:flex;gap:14px;flex-wrap:wrap}
+#titulka .chips b{border:2px solid rgba(11,38,60,.2);background:rgba(255,255,255,.6);border-radius:60px;padding:12px 24px;font-size:30px;color:#0b263c}
+#titulka .url{margin-top:30px;font-size:40px;font-weight:800;color:#0b263c}
+#titulka .door{position:absolute;right:200px;top:185px;height:560px;filter:drop-shadow(0 30px 30px rgba(60,40,20,.3))}
+#prispevek{width:1080px;height:1350px}
+#prispevek .door{position:absolute;left:70px;top:190px;height:900px;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+#prispevek .r{position:absolute;left:600px;right:60px;top:170px}
+#prispevek .k{font-weight:700;letter-spacing:.14em;font-size:22px;color:#a9cbea;text-transform:uppercase}
+#prispevek h2{font-size:66px;white-space:nowrap;font-weight:800;letter-spacing:-.03em;line-height:.95;margin:14px 0 40px}
+#prispevek h2 span{color:#a9cbea}
+#prispevek .st{border-top:2px solid rgba(255,255,255,.18);padding:22px 0}
+#prispevek .st b{display:block;font-size:66px;font-weight:800;line-height:1}
+#prispevek .st span{font-size:26px;color:rgba(255,255,255,.75)}
+#prispevek .price{margin-top:30px;font-size:30px;color:#a9cbea;font-weight:700}
+#prispevek .price b{display:block;font-size:76px;color:#fff;letter-spacing:-.03em}
+#prispevek .url{position:absolute;left:0;right:0;bottom:60px;text-align:center;font-size:44px;font-weight:800}
+</style></head><body>
+<div class="box navy" id="profil"><div class="p">PREMIUM</div><div class="n">60</div><div class="s">RC3 · EI 60</div></div>
+<div class="box sand" id="titulka">
+  <div class="txt"><div class="k">Bezpečnostní dveře do bytu</div><h1>PREMIUM <span>60</span></h1>
+  <div class="chips"><b>RC3</b><b>EI 60</b><b>42 dB</b><b>NBÚ ČR</b></div>
+  <div class="url">premium60.cz</div></div>
+  <img class="door" src="../../img/premium60-dvere.webp" alt="">
+</div>
+<div class="box navy" id="prispevek">
+  <img class="door" src="../../img/premium60-dvere.webp" alt="">
+  <div class="r"><div class="k">Bezpečnostní dveře do bytu</div><h2>PREMIUM <span>60</span></h2>
+    <div class="st"><b>RC3</b><span>bezpečnostní třída</span></div>
+    <div class="st"><b>EI 60</b><span>požární odolnost ze strany závěsů</span></div>
+    <div class="st"><b>42 dB</b><span>odhlučnění</span></div>
+    <div class="price">Komplet s montáží<b>42 500 Kč</b>vč. 12 % DPH</div></div>
+  <div class="url">premium60.cz</div>
+</div>
+</body></html>
